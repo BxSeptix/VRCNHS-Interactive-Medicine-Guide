@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Medicine Guide</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e8f5f7, #cce0e2);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            padding: 1px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+        }
+
+        .school-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .icon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.15;
+            z-index: 1;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .icon1 { top: 10%; left: 5%; }
+        .icon2 { top: 30%; right: 8%; }
+        .icon3 { bottom: 20%; left: 12%; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: #00796b;
+            color: white;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-buttons a {
+            padding: 8px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #004d40;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-buttons a:hover {
+            background-color: #002f2a;
+        }
+
+        .language-selector select {
+            padding: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #004d40;
+            color: #fff;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            padding: 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .content-wrapper {
+            display: flex;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-section {
+            flex: 1;
+            background: url('images/medicine-1.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .text-section h1 {
+            font-size: 2.5em;
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .text-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .text-section .start-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: white;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-section .start-btn:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/medicine-3193.png" class="icon icon1" alt="Icon 1"> 
+    <img src="images1/pills-3941.png" class="icon icon2" alt="Icon 2">
+    <img src="images/medical-433.png" class="icon icon3" alt="Icon 3">
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="School Logo">
+            <div class="school-name">VIRGINIA RAMIREZ-CRUZ NATIONAL HIGH SCHOOL</div>
+        </div>
+        <div class="header-buttons">
+            <a href="ABOUT.html">About Us</a>
+            <div class="language-selector">
+                <select id="language" onchange="translatePage()">
+                    <option value="en">English</option>
+                    <option value="fil">Tagalog (Filipino)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="image-section"></div>
+            <div class="text-section">
+                <h1 id="title">Welcome to the Medicine Guide</h1>
+                <p id="description">
+                    This guide is designed to help you understand medications with ease, offering essential information 
+                    in an accessible format. Explore our resources to learn more about safe and effective use of medicines.
+                </p>
+                <a href="SECTION AREA.html" class="start-btn" id="start-btn">Let’s Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function translatePage() {
+            const language = document.getElementById('language').value;
+
+            const contentEN = {
+                title: "Welcome to the Medicine Guide",
+                description: "This guide is designed to help you understand medications with ease, offering essential information in an accessible format. Explore our resources to learn more about safe and effective use of medicines.",
+                startBtn: "Let’s Get Started"
+            };
+
+            const contentFIL = {
+                title: "Maligayang Pagdating sa Gabay sa Gamot",
+                description: "Ang gabay na ito ay ginawa upang matulungan kang maunawaan ang mga gamot nang madali, na nagbibigay ng mahahalagang impormasyon sa isang madaling maunawaan na format. Tuklasin ang aming mga mapagkukunan upang matuto nang higit pa tungkol sa ligtas at epektibong paggamit ng mga gamot.",
+                startBtn: "Simulan Natin"
+            };
+
+            const content = language === 'fil' ? contentFIL : contentEN;
+
+            document.getElementById('title').innerText = content.title;
+            document.getElementById('description').innerText = content.description;
+            document.getElementById('start-btn').innerText = content.startBtn;
+        }
+    </script>
+</body>
+</html>

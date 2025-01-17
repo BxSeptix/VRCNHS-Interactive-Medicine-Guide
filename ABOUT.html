@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00796b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #004d40;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #00332e;
+        }
+
+        .container {
+            margin: 100px auto 50px;
+            padding: 20px;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #80cbc4, #ffffff);
+            border-radius: 15px;
+            z-index: -1;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #00796b;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        h3 {
+            color: #004d40;
+            margin-bottom: 10px;
+        }
+
+        p, ul {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+
+        ul li::before {
+            content: "✔";
+            margin-right: 10px;
+            color: #00796b;
+        }
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">About Us</h1>
+        <div class="nav-buttons">
+            <a href="index.html">Home</a>
+			
+			<select id="languageSelector" style="padding: 5px; border-radius: 5px; font-size: 1em; cursor: pointer; border: none; background-color: #004d40; color: #fff;">
+				<option value="en">English</option>
+				<option value="tl">Tagalog</option>
+			</select>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 id="welcome">Welcome to the VRCNHS Interactive Medicine Guide</h2>
+     
+        <div class="card">
+            <h3 id="featuresTitle">Website Features</h3>
+            <ul>
+                <li id="First">Comprehensive medicine database with detailed descriptions, uses, and side effects.</li>
+                <li id="Second">Interactive search functionality for easy navigation.</li>
+                <li id="Third">Multilingual support for English and Tagalog to cater to diverse users.</li>
+                <li id="Fourth">User-friendly design with accessibility features for visually impaired users.</li>
+                <li id="Fifth">Regular updates to ensure the accuracy of medical information.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 id="Sixth">About the Program</h3>
+            <p id="Seventh">
+                The Interactive Medicine Guide is part of an initiative by VRCNHS to promote health literacy among 
+                students, staff, and the community. This program bridges the gap between complex medical information 
+                and everyday understanding, making health care knowledge more accessible.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id="Eighth">School Information</h3>
+            <p>
+                <strong>School Name:</strong> VIRGINIA RAMIREZ-CRUZ HIGHSCHOOL (VRCNHS)<br>
+                <strong>Principal:</strong> Dr. Maria Santos<br>
+                <strong>Address:</strong> 3014 Siling Bata, Pandi, Bulacan, Philippines<br>
+                <strong>Contact:</strong> (044) 661 0230<br>
+                <strong>Email:</strong> vrcnhs.ssg@gmail.com
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 id="Nineth">About the Developers</h3>
+            <p id="Tenth">
+                Our team comprises passionate faculty and students from VRCNHS. Each member has contributed to making this 
+                project a success, from designing the interface to curating content. This is a product of collaboration and dedication.
+            </p>
+			
+			<div style="display: flex; align-items: center; margin-bottom: 20px;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images/andrew.jpg" alt="Developer 1 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Cruz, Jhon Andrew</p>
+					<p><b>Position:</b> Main Developer</p>
+					<p><b>Contribution:</b> Structure of whole website/project (HTML)</p>
+					<p><b>Email:</b> jhonandrew09292578775@gmail.com</p>
+					<p><b>Birthday:</b> September 12, 2006</p>
+					<p><b>Address:</b> Siling Bata, Pandi, Bulacan</p>
+				</div>
+			</div>
+
+			<div style="display: flex; align-items: center; margin-bottom: 20px;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images/erica.jpg" alt="Developer 2 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Ibasco, Erica Kaye</p>
+					<p><b>Position:</b> Support Developer</p>
+					<p><b>Contribution:</b> Backend development</p>
+					<p><b>Email:</b> ericakayeibasco6@gmail.com</p>
+					<p><b>Birthday:</b> March 08, 2007</p>
+					<p><b>Address:</b> Padre Pio Cacarong Bata, Pandi, Bulcan</p>
+				</div>
+			</div>
+
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images/cyron.jpg" alt="Developer 3 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Calumpiano, Cyron</p>
+					<p><b>Position:</b> Support Developer</p>
+					<p><b>Contribution:</b> Design and UI/UX</p>
+					<p><b>Email:</b> Cyroncalumpiano33@gmail.com</p>
+					<p><b>Birthday:</b> February 5, 2007</p>
+					<p><b>Address:</b> Bagong Barrio, Pandi, Bulacan</p>
+				</div>
+			</div>
+			
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images1/tristan.jpg" alt="Developer 4 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Magtalas, Tristan</p>
+					<p><b>Position:</b> Support Developer</p>
+					<p><b>Contribution:</b> Content Researcher</p>
+					<p><b>Email:</b> tristanmagtalas01@gmail.com</p>
+					<p><b>Birthday:</b> November 12, 2005</p>
+					<p><b>Address:</b> Bagong Barrio, Pandi, Bulacan</p>
+				</div>
+			</div>
+			
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images/apple.jpg" alt="Developer 5 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Cinilong, Apple</p>
+					<p><b>Position:</b> Trouble Shoot Team</p>
+					<p><b>Contribution:</b> Design Specialist</p>
+					<p><b>Email:</b> applecinilong@gmail.com</p>
+					<p><b>Birthday:</b> February 12 2006</p>
+					<p><b>Address:</b> Mapulang Lupa, Pandi, Bulacan</p>
+				</div>
+			</div>
+			
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images/aeron.jpg" alt="Developer 6 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Solon, Aeron</p>
+					<p><b>Position:</b> Trouble Shoot Team</p>
+					<p><b>Contribution:</b> Translation Coordinator</p>
+					<p><b>Email:</b> aeronsolon.0807@gmail.com </p>
+					<p><b>Birthday:</b> August 24,2007</p>
+					<p><b>Address:</b> Padre Pio Cacarong Bata, Pandi, Bulcan</p>
+				</div>
+			</div>
+			
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images/darwin.jpg" alt="Developer 7 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Eelesterio, Darwin</p>
+					<p><b>Position:</b> Trouble Shoot Team</p>
+					<p><b>Contribution:</b> Quality Assurance Tester</p>
+					<p><b>Email:</b> darwinelesterio177@gmail.com</p>
+					<p><b>Birthday:</b> August 10, 2005</p>
+					<p><b>Address:</b> Bagong Barrio, Pandi, Bulacan</p>
+				</div>
+			</div>
+			
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images1/rickwarren.jpg" alt="Developer 8 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Esteban, Rickwarren</p>
+					<p><b>Position:</b> Trouble Shoot Team</p>
+					<p><b>Contribution:</b> Documentation Writer</p>
+					<p><b>Email:</b> Rickwarrenalexesteban@gmail.com</p>
+					<p><b>Birthday:</b> December 10 2006</p>
+					<p><b>Address:</b> Mapulang Lupa, Pandi, Bulacan</p>
+				</div>
+			</div>
+			
+			<div style="display: flex; align-items: center;">
+				<div style="flex: 0 0 150px; margin-right: 20px;">
+					<img src="images1/wilson.jpg" alt="Developer 9 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+				</div>
+				<div style="flex: 1;">
+					<p><b>Name:</b> Seguira, Wilson</p>
+					<p><b>Position:</b> Trouble Shoot Team</p>
+					<p><b>Contribution:</b> Accessibility Advocate</p>
+					<p><b>Email:</b> wilsonphilipseguira0@gmail.com </p>
+					<p><b>Birthday:</b> October 03, 2007</p>
+					<p><b>Address:</b> Mapulang Lupa, Pandi, Bulacan</p>
+				</div>
+			</div>
+        </div>
+		
+		<div class="card">
+            <h3 id="Eleventh">Contact Information</h3>
+            <ul>
+                <li>Email: jhonandrew09292578775@gmail.com</li>
+                <li>Phone: (+63) 970-6914-856 </li>
+                <li>Address: Pandi, Bulacan</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-button" id="goBack">Go Back</a>
+    </div>
+</body>
+</html>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const translations = {
+				en: {
+					title: "About Us",
+					welcome: "Welcome to the VRCNHS Interactive Medicine Guide",
+					featuresTitle: "Website Features",
+					First: "Comprehensive medicine database with detailed descriptions, uses, and side effects.",
+					Second: "Interactive search functionality for easy navigation.",
+					Third: "Multilingual support for English and Tagalog to cater to diverse users.",
+					Fourth: "User-friendly design with accessibility features for visually impaired users.",
+					Fifth: "Regular updates to ensure the accuracy of medical information.",
+					Sixth: "About the Program",
+					Seventh: "The Interactive Medicine Guide is part of an initiative by VRCNHS to promote health literacy among students, staff, and the community. This program bridges the gap between complex medical information and everyday understanding, making health care knowledge more accessible.",
+					Eighth: "School Information",
+					Nineth: "About the Developers",
+					Tenth: "Our team comprises passionate faculty and students from VRCNHS. Each member has contributed to making this project a success, from designing the interface to curating content. This is a product of collaboration and dedication.",
+					Eleventh: "Contact Information",
+					goBack: "Go Back",
+				},
+				tl: {
+					title: "Tungkol sa Amin",
+					welcome: "Maligayang pagdating sa VRCNHS Interactive Medicine Guide",
+					featuresTitle: "Mga Tampok ng Website",
+					First: "Komprehensibong database ng gamot na may mga detalyadong paglalarawan, paggamit, at mga side effect.",
+					Second: "Interactive na pag-andar sa paghahanap para sa madaling pag-navigate.",
+					Third: "Multilingual na suporta para sa English at Tagalog para magsilbi sa magkakaibang mga user.",
+					Fourth: "Disenyong user-friendly na may mga feature ng accessibility para sa mga user na may kapansanan sa paningin.",
+					Fifth: "Regular na mga update upang matiyak ang katumpakan ng impormasyong medikal.",
+					Sixth: "Tungkol sa Programa",
+					Seventh: "Ang Interactive Medicine Guide ay bahagi ng isang inisyatiba ng VRCNHS upang itaguyod ang health literacy sa mga mag-aaral, kawani, at komunidad. Tinutulay ng programang ito ang agwat sa pagitan ng kumplikadong impormasyong medikal at pang-araw-araw na pag-unawa, na ginagawang mas madaling ma-access ang kaalaman sa pangangalagang pangkalusugan.",
+					Eighth: "Impormasyon sa Paaralan",
+					Nineth: "Tungkol sa mga Developer",
+					Tenth: "Binubuo ang aming koponan ng masugid na guro at mga mag-aaral mula sa VRCNHS. Nag-ambag ang bawat miyembro upang maging matagumpay ang proyektong ito, mula sa pagdidisenyo ng interface hanggang sa pag-curate ng nilalaman. Ito ay produkto ng pagtutulungan at dedikasyon.",
+					Eleventh: "Impormasyon sa Pakikipag-ugnayan",
+					goBack: "Bumalik",
+				},
+			};
+
+			const languageSelector = document.getElementById("languageSelector");
+			languageSelector.addEventListener("change", (event) => {
+				const selectedLanguage = event.target.value;
+				const keys = translations[selectedLanguage];
+				Object.keys(keys).forEach((key) => {
+					const element = document.getElementById(key);
+					if (element) {
+						element.textContent = keys[key];
+					}
+				});
+			});
+		});
+	</script>

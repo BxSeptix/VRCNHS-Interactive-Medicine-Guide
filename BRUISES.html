@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.2) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 1em;
+            padding: 10px;
+            color: #555;
+            display: none; 
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; 
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+		
+		.feedback-container {
+			background: rgba(255, 255, 255, 0.85);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			margin: 0 auto;
+			max-width: 900px;
+			width: 90%;
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.feedback-container h2 {
+			color: #2369a8;
+			font-size: 2em;
+			margin-bottom: 20px;
+		}
+
+		.feedback-container textarea {
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 1rem;
+			margin-bottom: 20px;
+		}
+
+		.feedback-button {
+			padding: 10px 20px;
+			background-color: #4caf50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.1em;
+		}
+
+		.feedback-button:hover {
+			background-color: #45a049;
+		}
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>
+
+    <img src="images1/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images1/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images1/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Bruises</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/warning.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">⚠️ For serious injuries, administer first aid immediately. Then, contact emergency services or proceed to the nearest clinic. ⚠️</h2>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/iodine.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">IODINE</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>Povidone-iodine is a topical antiseptic agent used for the treatment and prevention of infection in wounds. Povidone-iodine is a stable chemical complex of polyvinylpyrrolidone (povidone, PVP) and elemental iodine. It contains from 9.0% to 12.0% available iodine, calculated on a dry basis.</div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>Directions
+														<br>	• clean the affected area.
+														<br>	• vapply a small amount of product to the area 1 to 3 timesdaily.
+														<br>	• may be covered with a sterile bandage.
+														<br>	• if bandaged, let dry first.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/arnicare.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">ARNICARE</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>Arnica is a perennial that grows to a height of 1 to 2 feet with yellow-orange flowers similar to daisies. Stems are round and hairy, ending in 1 to 3 flower stalks, with flowers 2 to 3 inches across. Leaves are bright green.</div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>• Apply a thin layer of Arnicare Gel to affected area and massage gently as soon as possible after minor injury.
+														<br>	• Repeat 3 times a day or as needed.
+														<br>	• If heat or ice is applied, wait 5 minutes before applying Arnicare Gel.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/voltaren-b.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">VOLTAREN</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>Voltaren Emulgel contains the active ingredient diclofenac, which belongs to a group of medicines called Non-steroidal anti-inflammatory drugs (NSAIDs) Voltaren Emulgel has analgesic and anti-inflammatory properties and, due to the aqueous-alcoholic base, has a soothing and cooling effect.</div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>Voltaren Emulgel Extra Strength
+														<br>	• Apply 2 g of gel 2 times a day (morning and evening) on the affected area.
+														<br>	• The amount of gel applied (2 g for each application) should be measured using the dosing card supplied in the product carton. ...
+														<br>	• Do not use more than 4 g per day.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/betadine.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">BETADINE</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>Contains Povidone-Iodine that has Triple-Kill Power vs. clinically significant pathogens85. Kills 99.99% germs and stops infection. Non-sting and painless and gentle on kids. Treats wounds, cuts, burns, abrasions, scratches, bedsores, lacerations and surgical wounds.</div>
+                <div class="guide" id="guide-5"><h3>Guide</h3> Gently clean the affected area. Apply your preferred Betadine First Aid product to the affected area. The wound may be covered by a sterile bandage. If bandaged, let solution dry first.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/agua.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">AGUA OXIGENADA</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>Hydrogen Peroxide (agua oxigenada) has an extra oxygen atom than water, this extra oxygen atom breaks down and the molecule of water releases from this separately.</div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>Follow all directions on the product package. If you have any questions, ask your doctor or pharmacist.
+														<br>
+														<br>	Do not use in the eyes or apply over large areas of skin.
+														<br>
+														<br>	If you are using this product on the skin, clean the affected area before use. Apply a small amount of product on the affected area, usually 1 to 3 times daily or as directed by your doctor. If you apply a bandage after using this product, let the area dry first.
+														<br>
+														<br>	If you are using this product as a mouth rinse, mix with an equal amount of water before using. Swish in the mouth over the affected area for at least 1 minute, then spit out. Do not swallow this product. Rinse up to 4 times daily or as directed by your dentist or doctor.
+														<br>
+														<br>	Use this product regularly in order to get the most benefit from it. To help you remember, use it at the same time(s) each day.
+														<br>	
+														<br>	Tell your doctor if your condition does not get better in 7 days or if it gets worse. If you think you may have a serious medical problem, get medical help right away.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/bandaid.jpg" alt="Medicine 7">
+                <h2 id="med-name-7">BAND AID</h2>
+                <div class="description" id="desc-7"><h3>Description</h3>A piece of sticking plaster of a type having a gauze pad in the center, used to cover minor wounds.</div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>When applying a bandage, you should wrap it in a spiral pattern from the inside to the outside of the injured limb. You should also make sure the bandage is firm but not too tight. </div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/alcohol.png" alt="Medicine 8">
+                <h2 id="med-name-8">ALCOHOL</h2>
+                <div class="description" id="desc-8"><h3>Description</h3>provides everyday, accessible disinfecting with its range of isopropyl- and ethyl-based rubbing alcohols. 99.9% effective against bacteria and viruses. Green Cross Alcohol also has moisturizing variants to prevent skin dryness.</div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>In order to use the Green Cross Solution, pour the mixture on your hands directly. You can also apply it with the help of cotton balls. Then, rub liberally and lightly on the skin until the solution blends in. Do not swallow or use the Green Cross Solution near eyes.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/bandage.jpg" alt="Medicine 9">
+                <h2 id="med-name-9">BANDAGE</h2>
+                <div class="description" id="desc-9"><h3>Description</h3>A strip of material used to bind a wound or to protect an injured part of the body.</div>
+                <div class="guide" id="guide-9"><h3>Guide</h3>When applying a bandage, you should wrap it in a spiral from the inside to the outside of the injured body part. You should also extend the bandage at least an inch past the edges of the wound.</div>
+            </div>
+
+        </div>
+			<div class="feedback-container">
+				 <h2>Feedback</h2>
+				 <form action="#" method="post">
+					 <textarea name="feedback" id="feedback" placeholder="Enter your feedback here..." rows="4"></textarea><br>
+					 <button type="submit" class="feedback-button">Submit Feedback</button>
+				 </form>
+			</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		document.querySelector('.feedback-button').addEventListener('click', function(event) {
+			event.preventDefault();
+			alert('Thank you for your feedback!');
+		});
+    </script>
+</body>
+</html>

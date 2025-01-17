@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Area</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        #languageSelector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background-color: #004d40;
+            color: #fff;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s;
+        }
+        
+        .floating-icon1 { top: 10%; left: 5%; width: 100px; }
+        .floating-icon2 { top: 50%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 20%; left: 15%; width: 120px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 90px; }
+
+        .floating-icon:hover {
+            transform: scale(1.1) rotate(15deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #ffffffcc; 
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #00796b;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .grid-item {
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid p {
+            font-size: 1.1em;
+            color: #004d40;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .clinic-info {
+            margin-top: 30px;
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .clinic-info h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .clinic-info p {
+            margin: 5px 0;
+        }
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }		
+		
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+ 
+    <select id="languageSelector">
+        <option value="en">English</option>
+        <option value="tl">Tagalog</option>
+    </select>
+
+    <img src="images/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="title">Select What You Feel</h1>
+        <div class="grid">
+            <div class="grid-item">
+                <a href="HEADACHES.html">
+                    <img src="images/headaches.jpg" alt="Image 1">
+                </a>
+                <p id="HEADACHES">HEADACHES</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="DIZZY.html">
+                    <img src="images/dizzy.jpg" alt="Image 2">
+                </a>
+                <p id="DIZZY">DIZZY</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="STOMACHPAIN.html">
+                    <img src="images1/stomachpain.jpg" alt="Image 3">
+                </a>
+                <p id="STOMACHPAIN">STOMACH PAIN</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="FEVER.html">
+                    <img src="images/fever.jpg" alt="Image 4">
+                </a>
+                <p id="FEVER">FEVER</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="ITCHING.html">
+                    <img src="images/itching.jpg" alt="Image 5">
+                </a>
+                <p id="ITCHING">ITCHING</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="DIARRHEA.html">
+                    <img src="images/diarrhea.jpg" alt="Image 6">
+                </a>
+                <p id="DIARRHEA">DIARRHEA</p>
+            </div>
+            <div class="grid-item">
+                <a href="COUGH.html">
+                    <img src="images/cough.jpg" alt="Image 7">
+                </a>
+                <p id="COUGH">COUGH</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="SNEEZE.html">
+                    <img src="images/cold.jpg" alt="Image 8">
+                </a>
+                <p id="SNEEZE">SNEEZE</p>
+            </div>
+			
+            <div class="grid-item">
+                <a href="SOREEYES.html">
+                    <img src="images1/soreeyes.jpg" alt="Image 9">
+                </a>
+                <p id="SOREEYES">SORE EYES/EYES STRAIN</p>
+            </div>
+			
+			<div class="grid-item">
+                <a href="SORETHROATS.html">
+                    <img src="images1/sorethroats.jpg" alt="Image 10">
+                </a>
+                <p id="SORETHROATS">SORE THROATS</p>
+            </div>
+			
+			<div class="grid-item">
+                <a href="FATIGUE.html">
+                    <img src="images/fatigue.jpg" alt="Image 11">
+                </a>
+                <p id="FATIGUE">FATIGUE</p>
+            </div>
+
+			<div class="grid-item">
+                <a href="ALLERGIES.html">
+                    <img src="images/allergies.jpg" alt="Image 12">
+                </a>
+                <p id="ALLERGIES">ALLERGIES</p>
+            </div>
+			
+			<div class="grid-item">
+                <a href="BRUISES.html">
+                    <img src="images/bruises.jpg" alt="Image 13">
+                </a>
+                <p id="BRUISES">BRUISES</p>
+            </div>
+			
+			<div class="grid-item">
+                <a href="SKINISSUE.html">
+                    <img src="images1/skinissue.jpg" alt="Image 14">
+                </a>
+                <p id="SKINISSUE">SKIN ISSUE</p>
+            </div>
+        </div>
+        
+        <div class="clinic-info">
+            <h2 id="Under">Need Further Assistance?</h2>
+            <p id="Clinic">
+                If your condition is not listed above (e.g., asthma, etc.), please contact the school clinic for immediate assistance.</p>
+                <p><strong>Clinic Contact Number:</strong> +63 970-6914-856<br>
+                <strong>Operating Hours:</strong> Monday to Friday, 8:00 AM - 5:00 PM
+            </p>
+        </div>
+		
+		<a href="index.html" class="back-button" id="goBack">Go Back</a>
+    </div>
+</body>
+</html>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const translations = {
+				en: {
+					title: "Select What You Feel",
+					HEADACHES: "HEADACHES",
+					DIZZY: "DIZZY",
+					STOMACHPAIN: "STOMACH PAIN",
+					FEVER: "FEVER",
+					ITCHING: "ITCHING",
+					DIARRHEA: "DIARRHEA",
+					COUGH: "COUGH",
+					SNEEZE: "SNEEZE",
+					SOREEYES: "SORE EYES",
+					SORETHROATS: "SORE THROATS",
+					FATIGUE: "FATIGUE",
+					ALLERGIES: "ALLERGIES",
+					BRUISES: "BRUISES",
+					SKINISSUE: "SKIN ISSUE",
+					Under: "Need Further Assistance?",					
+					Clinic: "If your condition is not listed above (e.g., asthma, etc.), please contact the school clinic for immediate assistance.",
+					goBack: "Go Back",
+				},
+				tl: {
+					title: "Piliin ang Nararamdaman Mo",
+					HEADACHES: "SAKIT NG ULO",
+					DIZZY: "NAHIHILO",
+					STOMACHPAIN: "SAKIT NG TIYAN",
+					FEVER: "LAGNAT",
+					ITCHING: "NANGANGATI",
+					DIARRHEA: "PAGTATAE",
+					COUGH: "UBO",
+					SNEEZE: "SIPON",
+					SOREEYES: "SORE EYES",
+					SORETHROATS: "SORE THROAT",
+					FATIGUE: "PAGOD",
+					ALLERGIES: "ALLERGIES",
+					BRUISES: "MGA PASA",
+					SKINISSUE: "ISYU SA BALAT",
+					Under: "Kailangan ng Karagdagang Tulong?",
+					Clinic: "Kung ang iyong kondisyon ay hindi nakalista sa itaas (hal., hika, atbp.), mangyaring makipag-ugnayan sa klinika ng paaralan para sa agarang tulong.",
+					goBack: "Bumalik",
+				},
+			};
+
+			const languageSelector = document.getElementById("languageSelector");
+			languageSelector.addEventListener("change", (event) => {
+				const selectedLanguage = event.target.value;
+				const keys = translations[selectedLanguage];
+				Object.keys(keys).forEach((key) => {
+					const element = document.getElementById(key);
+					if (element) {
+						element.textContent = keys[key];
+					}
+				});
+			});
+		});
+	</script>
