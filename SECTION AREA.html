@@ -96,34 +96,29 @@
             font-weight: bold;
         }
 
-	 .container {
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    flex-direction: column;
-	    padding: 20px; 
+	 .clinic-info {
+	    margin-top: 30px;
+	    background-color: #00796b;
+	    color: white;
+	    padding: 20px;
+	    border-radius: 10px;
+	    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	    max-width: 900px;
+	    width: 100%;
+	    margin: 30px auto; 
+	    box-sizing: border-box; 
+	    text-align: center; 
 	}
-
-        .clinic-info h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .clinic-info p {
-            margin: 5px 0;
-        }
-		
-		.back-button {
-            display: inline-block;
-            margin: 20px auto;
-            text-decoration: none;
-            color: white;
-            background-color: #00796b;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
+	
+	.clinic-info h2 {
+	    font-size: 1.5em;
+	    margin-bottom: 10px;
+	}
+	
+	.clinic-info p {
+	    margin: 5px 0;
+	    line-height: 1.5; 
+	}
 
         .back-button:hover {
             background-color: #004d40;
@@ -131,7 +126,7 @@
 		
         @media (max-width: 768px) {
             .grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+                grid-template-columns: repeat(2, 1fr); 
             }
         }
     </style>
@@ -249,18 +244,14 @@
             </div>
         </div>
         
-        <div class="container">
-	    <div class="clinic-info">
-	        <h2 id="Under">Need Further Assistance?</h2>
-	        <p id="Clinic">
-	            If your condition is not listed above (e.g., asthma, etc.), please contact the school clinic for immediate assistance.
-	        </p>
-	        <p>
-	            <strong>Clinic Contact Number:</strong> +63 970-6914-856<br>
-	            <strong>Operating Hours:</strong> Monday to Friday, 8:00 AM - 5:00 PM
-	        </p>
-	    </div>
-	</div>
+        <div class="clinic-info">
+            <h2 id="Under">Need Further Assistance?</h2>
+            <p id="Clinic">
+                If your condition is not listed above (e.g., asthma, etc.), please contact the school clinic for immediate assistance.</p>
+                <p><strong>Clinic Contact Number:</strong> +63 970-6914-856<br>
+                <strong>Operating Hours:</strong> Monday to Friday, 8:00 AM - 5:00 PM
+            </p>
+        </div>
 		
 		<a href="index.html" class="back-button" id="goBack">Go Back</a>
     </div>
