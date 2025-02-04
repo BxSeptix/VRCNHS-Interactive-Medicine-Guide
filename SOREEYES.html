@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.2) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 1em;
+            padding: 10px;
+            color: #555;
+            display: none; /* Hidden by default */
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; /* Shown when active */
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>    
+
+    <img src="images/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Sore Eyes</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/eyemo.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">EYE MO</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>Each mL of EYE MO Red Eyes Formula contains 0.5 mg tetrahydrozoline HCl</div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>Adults and Children over 6 years old: Apply 1 to 2 drops in each eye up to 3 to 4 times daily, or as prescribed by a doctor.
+														<br>	Do not use this product in children under 6 years of age.
+														<br>	Do not exceed the stated dose or frequency of dosing.
+														<br>	Replace the cap after each use.</div>
+            </div>   
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/dexamethasone.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">DEXAMETHASONE</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>SYNTEMAX Sterile Eye Drops are ophthalmic eye drops for inflammatory and antibacterial combination. For the treatment of infectious ocular inflammations produced by organisms sensitive to Neomycin Base and Polymyxin B Sulfate.</div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>One to two drops topically in the conjunctival sac 4-6 times daily. Or as prescribed by a physician
+														<br>
+														<br>	• Instruct patient on proper instillation of eye solution and suspension.
+														<br>	• Wash hands before and after use.
+														<br>	• Do not touch the tip of the dropper to the eye, fingertips, or other surfaces to prevent contamination.
+														<br>	• Shake the suspension well prior to each use.
+														<br>	• Tilt the head back slightly and pull the lower eyelid down with the index finger to form a pouch. Squeeze the prescribed number of drops into the
+														<br>	• pouch. Close eyes to spread drops. To avoid excessive systemic absorption, apply finger pressure on the lacrimal sac for 1—2 minutes following application to the eye.
+														<br>	• To avoid contamination or the spread of infection, do not use dropper for more than one person.
+														<br>	• NOTE: Contact Lenses should not be worn during therapy</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/postop.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">POSTOP</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>For this product, a doctor's prescription is required. Please do not forget to attach a copy of your valid prescription(.jpeg, bmp, gif, jpg, jpeg, jpe, jif, jfif, jfi, png, wbmp, xbm, tiff format). After you have placed your order, our pharmacist will be in touch to confirm your order and validate your prescription. Please present the original copy of your prescription upon the arrival of your order.
+														<br>
+														<br>	An item like loose capsule/tablets, ampules, vials, and refrigerated items is not subject for merchandise return or exchange upon completing the purchase.</div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>Eye Suspension: One to two drops topically in the conjunctival sac(s). In severe disease, drops may be used up to four to six times daily.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/equisine.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">EQUISINE</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>Equisine Moist is a non-oily lubricant eye preparation which moisturizes, comforts and refreshes eyes which have become dry, tired and? strained through reading and working for long periods? at a computer screen, being in dry indoor environment such as air-conditioning and travelling , especially air travel.</div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>2 to 3 drops into each eye, 3 to 4 times daily or as needed.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/inoflox.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">INOFLEX</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>For the treatment of external eye infections due to susceptible organisms such as in blepharitis, hordeolum, dacryocystitis, conjunctivitis, meibomitis, keratitis, trachoma, and for the prevention of infection following corneal ulceration.
+														<br>
+														<br>	For the aseptic treatment during a perioperative period for ocular surgery caused by Staphylococcus spp., Moraxella spp., Chlamydia trachomatis, Pseudomonas spp., Haemophilus spp., Klebsiella spp., Serratia spp., Proteus spp., Acinetobacter spp., Corynebacterium spp., and anaerobic bacteria.</div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>Instill 1 to 2 drops three to four times a day on the affected eye(s). Continue treatment 2 days longer after the eye(s) appear normal. Do not exceed 2 weeks of application. Be careful not to touch the tip of the bottle to the eye directly in order to avoid contamination of the drug.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/tobramycin.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">TONRAMYCIN</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>Ophthalmic tobramycin is used in the eye to treat bacterial infections of the eye. Tobramycin works by killing bacteria. Ophthalmic tobramycin may be used alone or with other medicines for eye infections. Either the drops or the ointment form of this medicine may be used alone during the day.</div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>Tilt the head back and with the index finger of one hand, press gently on the skin just beneath the lower eyelid and pull the lower eyelid away from the eye to make a space. Drop the medicine into this space. Let go of the eyelid and gently close the eyes. Do not blink.</div>
+            </div>			   
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/murine.jpg" alt="Medicine 7">
+                <h2 id="med-name-7">MURINE</h2>
+                <div class="description" id="desc-7"><h3>Description</h3>MURINE® Sore eyes is a specially formulated ocular decongestant to help relieve burning, irritated and strained eyes.
+														<br>
+														<br>	Many factors in our modern lifestyle and environment can irritate eyes, making them feel sore and uncomfortable.</div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>Directions
+														<br>		1. Gently squeeze 1 or 2 drops into each eye 2-3 times a day or as directed by a physician.
+														<br>		2. Do not touch dropper tip to any surface since this may contaminate the solution.
+														<br>		3. Replace cap after using.
+														<br>		4. Discard contents 4 weeks after first opening the container.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/doctor.jpg" alt="Medicine 8">
+                <h2 id="med-name-8">BETTER CONSULT YOUR DOCTOR</h2>
+                
+            </div>
+			
+        </div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		document.querySelector('.feedback-button').addEventListener('click', function(event) {
+			event.preventDefault();
+			alert('Thank you for your feedback!');
+		});
+    </script>
+</body>
+</html>

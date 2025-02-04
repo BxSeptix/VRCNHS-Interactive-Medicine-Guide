@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.2) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 1em;
+            padding: 10px;
+            color: #555;
+            display: none; /* Hidden by default */
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; /* Shown when active */
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>
+ 
+    <img src="images/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Sneeze</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/neozep.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">NEOZEP</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>Phenylephrine HCl a nasal decongestant clears obstructed air passages and nasal sinuses due to congestion making breathing easier. It also reduces postnasal drip. Chlorphenamine Maleate, an anti-allergy, relieves symptoms such as runny nose, sneezing, and itchy, watery eyes.</div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>Adults: Orally, 1 tablet every 6 hours, or as recommended by a doctor. Neozep Z+ Forte provides the maximum daily intake of zinc when taken at the recommended dose of 4 times a day. To avoid excessive intake, refrain from using other supplements or medicines containing zinc.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/nafarin.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">NAFARIN-A</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>Nafarin®-A
+														<br>	This medicine is used for the relief of clogged nose, runny nose, postnasal drip, itchy and watery eyes, sneezing, headache, body aches, and fever associated with the common cold, allergic rhinitis, sinusitis, flu, and other minor respiratory tract infections.</div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>Adults and Children 12 years and older: Orally, 1 tablet every 6 hours, or, as recommended by a doctor.
+														<br>
+														<br>	For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+			</div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/disudrin.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">DISUDRIN</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>Disudrin® is the number 1 and most prescribed cold medicine for children that provides relief from clogged nose, runny nose, itchy watery eyes and sneezing due to common colds. </div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>1 to 3 months	0.25 mL	(Oral Drops) every 6 hours
+														<br>	4 to 6 months	0.5 mL (Oral Drops) every 6 hours
+														<br>	7 to 12 months	0.75 mL	(Oral Drops) every 6 hours
+														<br>	1 to 2 years	2.5 mL (1/2 teaspoonful) (Syrup) every 6 hours
+														<br>	2 to 6 years	5 mL (2 teaspoonful) (1 teaspoonful) (Syrup) every 6 hours
+														<br>	12 years and older	10 mL (syrup) every 6 hours
+														<br>
+														<br>	Or, as recommended by a doctor	Or, as recommended by a doctor</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/lopared.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">LOPARED</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>This medicine is used for the relief of clogged nose, sneezing, runny, itchy nose, and itchy, watery eyes associated with allergic rhinitis.</div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>Children 2 years and older:
+														<br>
+														<br>	Body weight 30 kg or less	-	2.5 mL (1/2 teaspoonful)
+														<br>	Body weight more than 30 kg		-	5 mL (1 teaspoonful)</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/sinutab.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">SINUTAB</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>For Maximum Relief from Head Cold: With Triple Power Formula: stops runny nose (sipon), clears nasal congestion (baradong ilong), and provides up to 6 hour pain relief.</div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>How much and how often should you use this Medicine?
+														<br>	
+														<br>	Adults and children 12 years and over: Take 1-2 tablets every 4 as necessary. Do not exceed 8 tablets within a 24-hour period.</div>
+			</div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/allerta.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">ALLERTA</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>Allerta gives less drowsy, fast relief from allergies.
+														<br>
+														<br>	It contains Loratadine, an anti-allergy ingredient. Loratadine blocks the substance that causes allergic symptoms (histamine). Loratadine is less likely to make you drowsy or dizzy than the older class of anti-allergy medicines.</div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>This medicine should be taken orally (by mouth) once a day. (See table.) Missed Dose: Take the missed dose as soon as the patient remembers then the subsequent dose as recommended (i.e., after 24 hours).</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/claritin.jpg" alt="Medicine 7">
+                <h2 id="med-name-7">CLARITIN</h2>
+                <div class="description" id="desc-7"><h3>Description</h3>Claritin® provides relief of symptoms that over 200 different allergens can trigger. It offers non-drowsy relief of symptoms caused by allergens like those from pollen, mold, dust, and pets. Claritin® is an antihistamine, so it hinders the cascade triggered by allergens.</div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>Adults and children 6 years and over	1 tablet daily; not more than 1 tablet in 24 hours
+														<br>	Children under 6 years of age	-	Ask a doctor
+														<br>	Consumers with liver or kidney disease	-	Ask a doctor</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/benadryl.jpg" alt="Medicine 8">
+                <h2 id="med-name-8">BENADRYl</h2>
+                <div class="description" id="desc-8"><h3>Description</h3>Benadryl® One offers fast, no-drowse, 24-hour allergy relief for adults and children 6 yrs and above. This product is available in 10mg Tablets.</div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>The recommended adult Benadryl dosage for allergies is 1 to 2 tablets or capsules by mouth every 4 to 6 hours as needed. You shouldn't take more than 6 doses (300 mg) in a 24-hour period. OTC Benadryl is only labeled for the relief of mild allergy symptoms.</div>
+            </div>						          
+			
+        </div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		document.querySelector('.feedback-button').addEventListener('click', function(event) {
+			event.preventDefault();
+			alert('Thank you for your feedback!');
+		});
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.2) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 1em;
+            padding: 10px;
+            color: #555;
+            display: none; /* Hidden by default */
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; /* Shown when active */
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>
+
+    <img src="images/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Fatigue</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/medicol.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">MEDICOL</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>Medicol® Advance 200
+														<br>	What is the medicine used for? For the relief of headache; For the relief of toothache, muscular aches, minor arthritis pain, backache, minor aches and pains associated with the common cold, and pain of menstrual cramps (dysmenorrhea); For fever reduction.</div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>This medicine is given orally and may be taken with food or milk if stomach upset occurs. Adults and children 12 years old and above: One softgel capsule up to 3 times a day, as needed. Leave at least 4 hours between each dose. Alternatively, you may take one softgel capsule every 8 hours, as needed.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/enervon.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">ENERVON</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>Feel the difference from the moment you wake up with Enervon Activ.
+														<br>
+														<br>	More than multivitamins, it's got natural fatigue fighters ginseng and royal jelly to help sustain your energy and help boost your mental focus so you wake up active and stay active!
+														<br>
+														<br>	It also contains vitamins C, A, E, D3, and Zinc to help boost your immune system so you stay protected. </div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>Enervon® Activ can be taken anytime of the day, once daily.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/muskelax.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">MUSKELAX</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>For the relief of mild to moderately severe pain of musculoskeletal origin such as muscle pain (myalgia), arthritis, rheumatism, sprain, strain, bursitis (inflammation of the fluid-filled sac or bursa that lies between a tendon and skin), tendinitis, backache, and stiff neck.
+														<br>	• For the relief of tension headache, dysmenorrhea, toothache, pain after tooth extraction and minor surgical operations.
+														<br>	• For fever reduction.</div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>Adults and Children 12 years and older: 1 tablet every 6 hours as needed, or, as directed by a doctor.
+														<br>	1. Do not exceed 6 tablets in each 24-hour period.
+														<br>	2. Do not take for more than 10 days unless directed by a doctor.
+														<br>	3. Not recommended for children below 12 years old.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/aronamin.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">ARONAMIN</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>Multivitamins (Aronamin Gold) is a multi-active vitamin preparation composed of the active forms of vitamins B1, B2, B6 and B12, and vitamins C and E.</div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>Use as directed on the label</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/seremax.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">SEREMAX</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>Drug used to treat epileptic siezures, an anticonvulsant.</div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>In overdoses up to 15g, no expected adverse reactions were reported. In the post-marketing experience, the most commony reported adverse  events observed  when pregabalin was taken in overdose included affective disorder, somnolence, confusional state, depression, agitation and restlessness. Treatment of pregabalin overdose should be included general supportive measures and may include haemodialysis if necessary.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/pharmaton.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">PHARMATON</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>Pharmaton ENERGY+ has GINSENG, VITAMIN B COMPLEX, and MAGNESIUM that are important for the production of energy and for normal energy-yielding metabolism, and VITAMIN C & D and Zinc that contribute to the normal function of the immune system. Food supplement. Usage: One tablet daily is recommended. For adult use only.</div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>Pharmaton ENERGY+ has GINSENG, VITAMIN B COMPLEX, and MAGNESIUM that are important for the production of energy and for normal energy-yielding metabolism, and VITAMIN C & D and Zinc that contribute to the normal function of the immune system. Food supplement. Usage: One tablet daily is recommended. For adult use only.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/doctor.jpg" alt="Medicine 7">
+                <h2 id="med-name-7">BETTER CONSULT YOUR DOCTOR</h2>
+            </div>
+			
+        </div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		document.querySelector('.feedback-button').addEventListener('click', function(event) {
+			event.preventDefault();
+			alert('Thank you for your feedback!');
+		});
+    </script>
+</body>
+</html>

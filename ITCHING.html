@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.2) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 1em;
+            padding: 10px;
+            color: #555;
+            display: none; /* Hidden by default */
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; /* Shown when active */
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>
+
+    <img src="images/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Itching</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/canesten.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">CLOTRIMAZOLE-CANESTEN</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>Known as alipunga, athlete's foot is a fungal skin infection caused by fungi that thrive in warm and moist environments like changing rooms, showers and public pools. Walking barefoot in these places puts you at greater risk. Athlete’s foot usually occurs between your toes, but it can also affect the soles and sides of your feet.</div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>Apply the cream thinly to the affected area and smooth in gently. Repeat 2-3 times a day for up to 3 or 4 weeks to kill the root of the infection. The length of treatment may vary depending on the kind of infection you have.
+														<br>
+														<br>	❕Don’t forget❕
+														<br>	Even if your symptoms seem to be clearing up, you should complete the full course of treatment to ensure the infection is treated.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/bepanthen.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">BEPATHEN</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>Bepanthen Itch Relief Cream is a steroid-free cream that helps relieve itching and redness in as fast as 30 minutes while promoting skin barrier restoration.</div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>Bepanthen Itch Relief Cream is free from steroids and may be applied as needed</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/calamine.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">CALAMINE-CHLORELIEF</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>ChloRelief is an over-the-counter (OTC), non-steroidal lotion that is a first-aid treatment to any itch and rash. Calamine, one of the main ingredients of the lotion, has been proven for years to be mild, safe and effective in providing instant relief to itch and rash brought about by various factors such as insect bites or stings, sunburn, chickenpox, measles, razor burn, eczema or skin asthma, diaper rash, prickly heat, psoriasis, and itch as side effect of hemodialysis. ChloRelief also contains Eucalyptus extract that provides a mild cooling and calming effect to the skin</div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>The main benefit of calamine lotion is that it can relieve itchiness. Poisonous plants such as poison ivy, poison oak and poison sumac can cause itching and skin irritation. Calamine lotion for poison ivy and other poisonous plants can help relieve the itch, along with any pain or discomfort. In addition, it can help dry up any oozing or weeping that can develop on your skin due to the irritation. Other calamine lotion uses include:
+														<br>
+														<br>	• Bug bites: You can apply calamine lotion to insect bites and stings to help with mild reactions. Apply the lotion several times a day until your symptoms clear up or the bug bites are gone.
+														<br>	• Chickenpox: You can use calamine lotion to help relieve the symptoms of this infectious condition. It can also prevent further skin infections.
+														<br>	• Shingles: Along with antiviral medicines, you can use calamine lotion for shingles. Apply the lotion directly to your skin to get some relief from the symptoms of this condition.
+														<br>	• Swimmer’s itch: You can use calamine lotion for rashes like swimmer’s itch. You can develop this skin condition if you swim in water containing certain parasites.
+														<br>	• Heat rash: You can use calamine lotion for heat rash as well. A heat rash is an area of your skin that becomes irritated when sweat gets trapped in your pores and ducts beneath your skin.
+														<br>	• Scabies: A small mite can cause a skin condition called scabies. To ease the itching from scabies, you can try applying calamine lotion. It can help relieve your symptoms but it won’t kill the mites.
+														<br>	• Chigger bites: Chiggers are a type of mite that feeds on human skin. Their bites can cause skin irritation and itching. You can apply calamine lotion to help relieve the itching.
+														<br>	• Acne: You may be able to use calamine lotion for acne. While it won’t treat your acne, it may help dry out a pimple if you use it as a spot treatment.
+														<br>	• Hives: You can develop hives for many different reasons. Calamine lotion for hives can help relieve the itching caused by this skin condition.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/memecort.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">MOMETASONE-MOMECORT</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>Mometasone furoate belongs to a group of medicines called topical corticosteroids, which are used on the skin to relieve inflammation (e.g., swelling, redness) and itch caused by certain skin problems. Mometasone furoate cream and ointment are classified as medium potency topical corticosteroids.</div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>Directions for Use: Rub a thin layer of mometasone cream or ointment to affected areas of the skin once a day, or as directed by a doctor. Do not use on the face for longer than 5 days. Do not use for longer than 5 days in children, unless directed by a doctor.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/mometasone.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">UNITED HOME-DERMATEC</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>Mometasone furoate belongs to a group of medicines called topical corticosteroids, which are used on the skin to relieve inflammation (e.g., swelling, redness) and itch caused by certain skin problems. Mometasone furoate cream and ointment are classified as medium potency topical corticosteroids.</div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>Directions for Use: Rub a thin layer of mometasone cream or ointment to affected areas of the skin once a day, or as directed by a doctor. Do not use on the face for longer than 5 days. Do not use for longer than 5 days in children, unless directed by a doctor.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/nizoral.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">KETOCONAZOLE-NIZORAL</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>Ketoconazole shampoo is an antifungal medication. It treats fungal or yeast infections in your skin. You can use this medicated shampoo as you would use a regular shampoo by massaging it into your skin. Follow the label for directions on how long you should let the product set before rinsing it off.</div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>How to use ketoconazole cream
+														<br>	1. Wash and dry the infected area of skin. If you're treating your feet, make sure you dry between your toes.
+														<br>	2. Use your own towel or flannel. This stops you passing the infection on to anyone else.
+														<br>	3. Gently rub the cream into the infected area and surrounding skin. You'll usually need a small amount, depending on the size of the area you're treating. Be careful not to let the cream get into your eyes or mouth. If it does get into your eyes or mouth, rinse them with water.
+														<br>	4. Wash your hands afterwards. This stops you spreading the infection to other parts of your body or other people.
+														<br>	If you're using any other creams, ointments or lotions on the same area of skin, do not put them on at the same time as ketoconazole cream. After putting on the ketoconazole cream, wait 30 minutes before you use different products on the same area. This gives the ketoconazole time to be absorbed into your skin.</div>
+			</div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/rashfree.jpg" alt="Medicine 7">
+                <h2 id="med-name-7">ZINC OXIDE-RASH FREE</h2>
+                <div class="description" id="desc-7"><h3>Description</h3>This medicine contains zinc oxide, a skin protectant. Zinc oxide acts as a physical barrier that soothes the skin and prevents it from coming into direct contact with external irritants. This protective effect prevents worsening of the condition and promotes the normal healing processes of the skin.</div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>Directions for Use
+														<br>
+														<br>	Wash hands before and after each application.
+														<br>
+														<br>	For diaper rash:
+														<br>	• Change wet and soiled diapers promptly.
+														<br>	• Clean the diaper area and allow it to dry.
+														<br>	• Apply zinc oxide ointment as often as necessary, with every diaper change, particularly at bedtime or when the skin may be exposed to wet diapers for a long period of time.
+														<br>
+														<br>	For other minor skin conditions:
+														<br>	• Clean the affected and surrounding areas of the skin with mild soap.
+														<br>	• Rinse thoroughly with water and pat dry.
+														<br>	• Apply a sufficient amount of zinc oxide ointment and rub gently on the affected areas of the skin once or twice daily. Use gauze dressing when needed.
+														<br>	Or, as directed by a doctor.
+														<br>	
+														<br>	For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/mometasoneelica.jpg" alt="Medicine 8">
+                <h2 id="med-name-8">MOMETASONE-ELICA</h2>
+                <div class="description" id="desc-8"><h3>Description</h3>This cream is the solution, with a formula that contains mometasone, a cortisone derivative that is known for fighting itching and dermatitis. Activates natural substances in the skin to reduce redness and irritation.</div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>Read the Patient Information Leaflet if available from your pharmacist before you start using this medication and each time you get a refill. If you have any questions, ask your doctor or pharmacist.
+														<br>
+														<br>	This medication is for use only on certain areas of skin: do not use it on the face, groin, or underarms, or for diaper rash, unless directed to do so by your doctor.
+														<br>	
+														<br>	Wash and dry your hands before using. Clean and dry the affected area. Apply as directed by your doctor, usually a thin film of medication to the affected area once daily. Gently rub in. Do not cover the treated area with bandages or other dressings unless instructed to do so by your doctor.
+														<br>
+														<br>	Do not wash or rinse the medication off immediately after applying it. Wash your hands with soap and water after each use unless you are using this medication to treat the hands. Avoid getting this medication in your eyes, nose, or mouth. If this occurs, rinse thoroughly with water and call your doctor if irritation lasts.</div>
+			</div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/mupirocin.jpg" alt="Medicine 9">
+                <h2 id="med-name-9">MUPIROCIN-MICROSCOT</h2>
+                <div class="description" id="desc-9"><h3>Description</h3>Mupirocin is an antibacterial ointment used to treat impetigo and secondary skin infections caused by Staphylococcus aureus and Streptococcus pyogenes. Mupirocin, formerly termed pseudomonic acid A, 1 is a novel antibacterial agent with a unique chemical structure and mode of action apart from other antibiotic agents.</div>
+                <div class="guide" id="guide-9"><h3>Guide</h3>This medication is for external use only. Do not take by mouth. Wash your hands before and after use. If you are treating a hand infection, only wash your hands before use. Do not get it in your eyes. If you do, rinse your eyes with plenty of cool tap water. Use it as directed on the prescription label at the same time every day. Do not use it more often than directed. Use the medication for the full course as directed by your care team, even if you think you are better. Do not stop using it unless your care team tells you to stop it early.
+														<br>
+														<br>	Apply a thin film of the medication to the affected area. You can cover the area with a sterile gauze dressing (bandage). Do not use an airtight bandage (such as a plastic-covered bandage).
+														<br>	
+														<br>	Talk to your care team about the use of this medication in children. While it may be prescribed for children for selected conditions, precautions do apply.
+														<br>
+														<br>	⚠️Overdosage: If you think you have taken too much of this medicine contact a poison control center or emergency room at once.
+														<br>
+														<br>	NOTE: This medicine is only for you. Do not share this medicine with others.</div>
+            </div>         			
+			
+        </div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		document.querySelector('.feedback-button').addEventListener('click', function(event) {
+			event.preventDefault();
+			alert('Thank you for your feedback!');
+		});
+    </script>
+</body>
+</html>

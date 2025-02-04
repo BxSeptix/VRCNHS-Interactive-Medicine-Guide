@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.2) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 1em;
+            padding: 10px;
+            color: #555;
+            display: none; /* Hidden by default */
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; /* Shown when active */
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+		
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>
+
+    <img src="images/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Fever</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/biogesic.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">BIOGESIC</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>A trusted brand of paracetamol, Paracetamol (Biogesic) is a medication that is typically used to relieve mild to moderate pain such as headache, backache, menstrual cramps, muscular strain, minor arthritis pain, toothache, and reduce fevers caused by illnesses such as the common cold and flu.</div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>What is the recommended daily dose of Biogesic® 500mg tablet for the treatment of headache? The recommended dose of Biogesic® 500mg for minor aches and pains such as headache is 1 to 2 tablets every 4 to 6 hours, as needed. Do not take more than 8 tablets (or 4 grams of paracetamol) in any 24-hour period.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/tempra.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">TEMPRA</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>Tempra® offers relief from fever and headache for both adults and children. Its active ingredient is paracetamol, and its syrup form is available in several child-friendly flavors.</div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>Tablet: Each tablet contains 325 mg of Paracetamol.
+															<br><br>
+															Forte Tablet: Each tablet contains 500 mg of Paracetamol.
+															<br><br>
+															Syrup: Each teaspoonful (5 mL) contains 120 mg of Paracetamol.
+															<br><br>
+															Ingredients: Acetaminophen (paracetamol), sorbitol solution, polyethylene glycol, flavors, sodium benzoate, methyl paraben, sucralose, anhydrous citric acid, FD&C yellow no. 6 (orange flavor), FD&C red no. 40 (strawberry flavor), purified water. Forte Syrup: Each teaspoonful (5 mL) contains 250 mg of Paracetamol. Ingredients: Acetaminophen (Paracetamol), sorbitol solution, sucralose, methyl paraben, polyethylene glycol, benzoic acid, sweetener (orange flavor), anhydrous citric acid, sodium benzoate, flavors, FD&C yellow no. 6 (orange flavor), FD&C red no. 40 (strawberry flavor), purified water.
+															<br><br>
+															Oral drops: Each mL contains 100 mg of Paracetamol.
+															<br><br>
+															Ingredients: Polyethylene glycol, sorbitol, sucralose, sodium benzoate, citric acid, flavor, methyl paraben, FD&C yellow no. 6 (orange flavor), FD&C red no. 40 (strawberry flavor), purified water.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/bioflu.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">BIOFLU</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>This medicine is used for the relief of clogged nose, runny nose, cough from postnasal drip, itchy and watery eyes, sneezing, headache, sore throat, body aches, and fever associated with the common cold, allergic rhinitis, sinusitis, flu and other minor respiratory tract infections.</div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>SRP is Php 8.00/caplet. What is the correct dosage? For children and adults over 12 years old, take 1 caplet every 6 hours, or as recommended by a doctor. For children aged 7 to 12 years old, take 10 mL (2 teaspoonsful Children's Bioflu®) every 6 hours, or as recommended by a doctor.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/biogesickids.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">BIOGESIC FOR KIDS</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>Biogesic® is the BEST-TASTING paracetamol fever medicine for kids 0-12 years old. It is easy to give to the child to ensure that the child gets the proper dose to bring down fever fast. It is safe and can be given even to children with fever due to dengue or post immunization</div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>Dosing in Children: 10mg/kg body weight dose given every 4 to 6 hours, as needed; or, you can follow the dose below:
+														<br>
+														<br>	0-3 months - 0.3 to 0.6 mL
+														<br>	4-6 months - 0.6 to 1 mL
+														<br>	7 months under 1 year - 1 mL
+														<br>	1-2 years - 1 to 1.2 mL
+														<br>	
+														<br>	1-2 years - 5 mL
+														<br>	3-6 years - 5 to 10 mL
+														<br>	7-10 years - 10-15 mL 
+														<br>	
+														<br>	Or, as prescribed by a physician. Shake well before use. Follow with water.</div>
+			</div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/rexidol.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">REXIDOL</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>Rexidol® Forte
+														<br>	For fast relief of different types of pain
+														<br>	Rexidol® Forte, BILIS-BANAT SA APAT: binat/bughat, sakit ng ulo, sakit ng katawan, o lagnat. Works in as fast as 30 minutes
+														<br>
+														<br>	Sa iba’t ibang sakit, isang bilis-banat na Rexidol® Forte ang katapat! 
+														<br>
+														<br>	ASC Ref. U003P091421RS</div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>Adults and children 12 years and above: 1-2 tablets every 6 hours, as needed for pain and/or fever, or, as directed by a doctor. Missed dose: If a dose is missed, give the next dose for pain and/or fever and the subsequent doses every 6 hours thereafter. Do not double the dose.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/nafarin.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">NAFARIN-A</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>Nafarin®-A
+														<br>	This medicine is used for the relief of clogged nose, runny nose, postnasal drip, itchy and watery eyes, sneezing, headache, body aches, and fever associated with the common cold, allergic rhinitis, sinusitis, flu, and other minor respiratory tract infections.</div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>Adults and Children 12 years and older: Orally, 1 tablet every 6 hours, or, as recommended by a doctor.
+														<br>
+														<br>	For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+			</div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/pediachlor.jpg" alt="Medicine 7">
+                <h2 id="med-name-7">PEDIACHLOR</h2>
+                <div class="description" id="desc-7"><h3>Description</h3>DESCRIPTION PEDIACHLOR® is Pediatrica's brand of Chloramphenicol Palmitate, found to possess marked antimicrobial effectiveness against gram-positive and gram-negative bacteria, including large viruses and rickettsiae. PHARMACOKINETICS PEDIACHLORⓇ is rapidly absorbed from the gastrointestinal tract.
+														<br>
+														<br>	For typhoid fever caused by susceptible S.typhi; meningeal infections caused by H. influenzae; serious infections caused by susceptible strains of Salmonella, Rickettsiae, or Chlamydia; bacteremia, meningitis or other serious infections caused by aerobic and anaerobic gram negative bacteria which are resistant to all other appropriate anti-infective agents; and cystic fibrosis.</div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>For more information on safety, precaution and other information about this product, please see the Product Insert.</div>
+            </div>
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/dolan.jpg" alt="Medicine 8">
+                <h2 id="med-name-8">IBUPROFEN DOLAN</h2>
+                <div class="description" id="desc-8"><h3>Description</h3>For Ibuprofen 100 mg/5 mL and 200 mg/5 mL Suspension: For the relief of mild to moderate aches and pains due to: Dental pain including teething pain, toothache; Headache including migraine, neuralgia (painful disorder of the nerves); Muscular aches including sprains and strains, minor arthritis pain, backache ( ...</div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>Recommended oral dose in children:
+														<br>
+														<br>	5 to 10 mg/kg body weight per dose given every 6 to 8 hours, or, as directed by a doctor.
+														<br>
+														<br>	Dose given every 6 to 8 hours as needed for pain and/or fever, or, as directed by a doctor.
+														<br>
+														<br>	Infants:
+														<br>	0-2 months - 0.5-1 mL	Ibuprofen (Dolan® FP) 100 mg/2.5 mL Suspension (Oral Drops)
+														<br>	3-5 months - 1-1.5 mL	Ibuprofen (Dolan® FP) 100 mg/2.5 mL Suspension (Oral Drops)
+														<br>	6-12 months - 1.5-2 mL	Ibuprofen (Dolan® FP) 100 mg/2.5 mL Suspension (Oral Drops)
+														<br>
+														<br>	children:
+														<br>	1-2 years - 5 mL(1 teaspoonful)		Ibuprofen (Dolan® FP) 100 mg/5 mL Suspension	2.5 mL	Ibuprofen (Dolan® FP Forte) 200 mg/5 mL Suspension
+														<br>	2-6 years - 5-10 mL(1-2 taespoonful)	Ibuprofen (Dolan® FP) 100 mg/5 mL Suspension	2.5 mL	Ibuprofen (Dolan® FP Forte) 200 mg/5 mL Suspension
+														<br>	7-12 years - 10 mL(2 teaspoonful	Ibuprofen (Dolan® FP) 100 mg/5 mL Suspension	5 mL	Ibuprofen (Dolan® FP Forte) 200 mg/5 mL Suspension</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/unitedhome.png" alt="Medicine 9">
+                <h2 id="med-name-9">UNITED HOME-FEVERTAB</h2>
+                <div class="description" id="desc-9"><h3>Description</h3>Ang United Home® ay sulit at maaasahang linya ng bitamina at gamot para sa buong pamilya. Ito ay pinagkakatiwalaan dahil sa abot-kaya at dekalidad na mga produkto nito tulad ng bitamina, gamot at ointments  para siguradong alaga ang buong pamilya sa bawat tahanan.
+														<br>	For the relief of minor aches and pains such as headache, backache, menstrual cramps, muscular aches, minor arthritis pain, toothache, and pain associated with the common cold and flu;
+														<br>	For fever reduction.</div>
+                <div class="guide" id="guide-9"><h3>Guide</h3>Adults and children 12 years old and above: 1 to 2 tablets every 4 – 6 hours, as needed for pain and/or fever, or as directed by a doctor.
+														<br>
+														<br>	Do not take more than 4g (8 tablets) of paracetamol in each 24-hour period.
+														<br>
+														<br>	For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+            </div>            
+			
+        </div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		document.querySelector('.feedback-button').addEventListener('click', function(event) {
+			event.preventDefault();
+			alert('Thank you for your feedback!');
+		});
+    </script>
+</body>
+</html>0
