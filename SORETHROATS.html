@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Guide</title>
-    <style>
+     <style>
 
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,80 +151,163 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/bactidol-hexetidine.png" alt="Medicine 1">
                 <h2 id="med-name-1">BACTIDOL</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>Hexetidine (Bactidol) 0.1% Solution is indicated for its antibacterial and antifungal action in the following circumstances: Minor oropharyngeal infections and inflammatory conditions including candidiasis. As an aid in the prevention and treatment of gingivitis.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>Gargle 2x a day for 24 hr protection.</div>
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves sore throat and bacterial infections.
+													<br>	• Provides antibacterial and antifungal protection.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains hexetidine, dichlorobenzyl alcohol, amylmetacresol, or guaifenesin.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For sore throat and oral infections.
+													<br>
+													<br>	<i>J&J. (n.d.). Bactidol Product Information.</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Gargle: 2x daily.
+													<br>	• Lozenges: 1 every 2-3 hours (max: 8/day).
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	Do not exceed the recommended dose.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Avoid eating or drinking immediately after use.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-dichlotobenzyl alcohol+amylmetacresol.png" alt="Medicine 2">
-                <h2 id="med-name-2">BACTIDOL</h2>
-                <div class="description" id="desc-2"><h3>Description</h3> Sore throat is one of the most common complaints brought to the attention of otolaryngologists. It may be symptomatic of a variety of illnesses, which is why the treatment must be matched to the individual. 
-															<br>
-															<br>	Taking Lozenges is a convenient, affordable option for symptomatic treatment of acute and chronic pharyngitis, irritation or inflammation of the upper respiratory tract and relief of unpleasant postoperative sensation in the throat. 
-															<br>	
-															<br>	Bactidol Extra Soothing Lozenges provides flavorful and convenient relief from sore throat. Comes in Orange and Honey Lemon Flavor. Available in packs of 8 and 16 Lozenges.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>1 lozenge every 2-3 hours with a maximum daily dose of 8 lozenges.</div>
+                <img src="images1/strepsil.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">STREPSILS</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves sore throat and mouth infections.
+													<br>	• Soothes throat irritation and reduces discomfort.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains dichlorobenzyl alcohol and amylmetacresol, which have antiseptic properties that kill bacteria and viruses.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For sore throat and minor mouth infections.
+													<br>	
+													<br>	<i>Reckitt Benckiser. (n.d.). Strepsils Product Information.</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults and children (6+ years): 1 lozenge every 2-3 hours.
+													<br>	• Maximum: 8 lozenges in 24 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 3 consecutive days without consulting a doctor.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Allow the lozenge to dissolve slowly in the mouth.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-ammonium chloride+diphenhydramine hcl.png" alt="Medicine 3">
-                <h2 id="med-name-3">BACTIDOL</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>Itchy or Dry Cough can be caused by the inflammation of your throat and upper airways, which results in a tickling sensation.
-															<br>
-															<br>	This type of cough comes with little to no phlegm or mucus. Sometimes, you also develop sore throat due to frequent coughing.</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>Adult and children older than 12 years:
-															<br>	10 mL (2 teaspoons) every 4 hours. Don't exceed 6 doses in a day.
-															<br>	
-															<br>	Children aged 6 to less then 12 years:
-															<br>	5 mL (1 teaspoon) every 4 hours. Don't exceed 6 doses in a day.</div>
+                <img src="images/betadinespray.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">BETADINE</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Treats and prevents infection in wounds and mouth sores.
+													<br>	• Reduces bacteria, viruses, and fungi.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains povidone-iodine, a broad-spectrum antiseptic that kills pathogens.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For oral and topical disinfection.
+													<br>	
+													<br>	<i>Mundipharma. (n.d.). Betadine Antiseptic Product Information.</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Mouthwash: Gargle with 10 mL for 30 seconds, 2-4 times daily.
+													<br>	• Topical: Apply to the affected area 1-2 times daily.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 7 consecutive days without medical advice.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Do not swallow the mouthwash.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-guaifenesin+bromhexine hcl.png" alt="Medicine 4">
-                <h2 id="med-name-4">BACTIDOL</h2>
-                <div class="description" id="desc-14><h3>Description</h3>Heavy or Cough with Phlegm produces mucus in the lungs. It is often accompanied by colds, fatigue, and/or postnasal drip.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Adult and Children older than 12 years:
-															<br>	10-15 mL (2-3 teaspoon) every 6 hours. Do not exceed 60 mL per day.
-															<br>
-															<br>	Children aged 6 to 12 years:
-															<br>	5-10 mL (1-2 teaspoon) every 6 hours. Do not exceed 30 mL per day.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images1/strepsil.jpg" alt="Medicine 5">
-                <h2 id="med-name-5">STREPSILS</h2>
-                <div class="description" id="desc-5"><h3>Description</h3>Strepsils Original lozenges provide fast, soothing and effective relief from the discomfort of sore throats. Each lozenge contains a combination of antibacterials to help kill the bacteria which can cause sore throat and mouth infections.</div>
-                <div class="guide" id="guide-5"><h3>Guide</h3>The recommended dose is Adults, Children (over 6 years) and the elderly – One lozenge to be dissolved slowly in the mouth every 2-3 hours up to a maximum of 12 lozenges in 24 hours. It is not recommended that children under 6 use this product. Remember that young children can choke on lozenges.</div>
+                <img src="images/dequadin.jpg" alt="Medicine 4">
+                <h2 id="med-name-4">DEQUADIAN</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves sore throat and mouth infections.
+													<br>	• Reduces pain and inflammation.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains dequalinium chloride, an antiseptic that kills bacteria and fungi.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For sore throat, mouth ulcers, and gingivitis.
+													<br>	
+													<br>	<i>Dequadian. (n.d.). Dequalinium Chloride Product Information.</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults and children (10+ years): 1 lozenge every 2-3 hours.
+													<br>	• Maximum: 8 lozenges in 24 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 7 consecutive days.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Let the lozenge dissolve slowly in the mouth.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/betadinespray.jpg" alt="Medicine 6">
-                <h2 id="med-name-6">BETADINE</h2>
-                <div class="description" id="desc-6"><h3>Description</h3>For fast and soothing relief of sore throat. For the treatment of acute mucosal infections of the mouth and pharynx including stomatitis, gingivitis, aphthous ulcers, pharyngitis, tonsillitis, monilial infections, common colds and influenza. Convenient, handy and easy to use. For children 6 years old and above.</div>
-                <div class="guide" id="guide-6"><h3>Guide</h3>One spray to the throat area, up to 3 times per day. Spit out excess liquid. Rinsing is not necessary. Supervise use with children.</div>
+                <img src="images/difflam.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">DIFFLAM</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves sore throat, mouth ulcers, and oral pain.
+													<br>	• Reduces inflammation and discomfort.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains benzydamine hydrochloride, a non-steroidal anti-inflammatory drug (NSAID) that reduces pain and swelling.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For sore throat, oral inflammation, and post-dental surgery pain.
+													<br>	
+													<br>	<i>iNova Pharmaceuticals. (n.d.). Difflam Product Information.</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Spray: 4-8 sprays every 1.5-3 hours.
+													<br>	• Lozenges: 1 every 1.5-3 hours.
+													<br>	• Maximum: 12 lozenges in 24 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 7 days without medical advice.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Avoid eating or drinking immediately after use.</div>
             </div>
 			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/dequadin.jpg" alt="Medicine 7">
-                <h2 id="med-name-7">DEQUADIAN</h2>
-                <div class="description" id="desc-7"><h3>Description</h3>Dequadin® Medicated Throat Lozenges contains dequalinium chloride, an antibacterial and antifungal medicine. It can help relieve sore throats and infections, such as a common strep infection or thrush caused by frequent use of an inhaler.</div>
-                <div class="guide" id="guide-7"><h3>Guide</h3>For adults and children 6 years and older: Dissolve one lozenge in the mouth slowly. Repeat every two hours as needed.</div>
-            </div>
-
-            <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/difflam.jpg" alt="Medicine 8">
-                <h2 id="med-name-8">DIFFLAM</h2>
-                <div class="description" id="desc-8"><h3>Description</h3>Difflam Lozenges with active ingredient Benzydamine HCl relieve pain due to sore throat, tonsillitis and other inflammatory conditions in the mouth and throat. Benzydamine HCl reduces pain and swelling with Anti-Inflammatory, Analgesic and (local) Anaesthetic benefits.</div>
-                <div class="guide" id="guide-8"><h3>Guide</h3>Age: Adults and children aged 6 years & over
-														<br>	Dosage:
-														<br>	
-														<br>	Above 12 years old: 15ml to be gargled for at least 30 sec every 1.5-3 hours.</div>
-            </div>
-			
-			
-        </div>
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+			</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
+			
+       
 
     <script>
 
@@ -233,10 +315,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
