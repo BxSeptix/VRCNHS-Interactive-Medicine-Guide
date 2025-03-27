@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,42 +151,85 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/bonamine.jpg" alt="Medicine 1">
                 <h2 id="med-name-1">BONAMINE</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>Meclizine Hydrochloride (Bonamine®) Chewable Tablet is used for the prevention and treatment of nausea, vomiting, or dizziness associated with motion sickness.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>For 25mg, adults and Children ≥ 11 yrs. old 1 to 2 tablets or, as prescribed by a physician. If additional dose is needed, interval should be 4 hours or longer. 
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b> Treats dizziness, vertigo, and motion sickness.
 													<br>
-													<br>	For 12.5mg, children 5-11 yrs old should be limited to two single doses only.
-													<br>	A daily dose should be taken one hour before travel starts for 24-hr protection. The tablet may be chewed and swallowed with or without water or swallowed whole with water.</div>
+													<br>	🔥 <b>How it works:</b> Blocks histamine receptors in the inner ear to reduce dizziness.
+													<br>
+													<br>	💡 <b>Common use:</b> For dizziness caused by motion sickness or vertigo.
+													<br>
+													<br>	<i>Bonamine. (n.d.). Meclizine Hydrochloride: Treatment for dizziness and motion sickness. United Laboratories, Inc. Retrieved from https://www.unilab.com.ph/products/bonamine</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	<b>Adults and Children</b> ≥ 11 years: 1–2 tablets (25 mg each) every 4–6 hours as needed.
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Take 1 hour before travel for maximum effectiveness.</div>
 			</div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/Vicks.png" alt="Medicine 2">
                 <h2 id="med-name-2">VICKS VAPORUB</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>You love to watch your kids sleep and see them lost in their world of dreams. But with a cough & cold, their sleep gets disturbed and their dreams are left incomplete. Use Camphor + Menthol + Eucalyptus Oil (Vicks VapoRub), providing relief from nasal congestion due to cold to help them sleep better!</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>For cough suppression, rub a thick layer of Vicks VapoRub on your chest and throat. Cover with a warm, dry cloth, if desired. Keep clothing loose about your throat and chest to help the vapors to reach the nose and mouth. For muscle and joint aches and pains, apply Vicks VapoRub onto the affected area not more than 3 to 4 times daily.</div>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b> Provides relief from congestion, colds, and muscle pain, which can help ease dizziness caused by sinus pressure.
+													<br>
+													<br>	🔥 <b>How it works:</b> The vapors help decongest the nasal passages, making breathing easier and reducing dizziness from colds.
+													<br>
+													<br>	💡 <b>Common use:</b> Dizziness linked to colds, congestion, or sinus issues.
+													<br>
+													<br>	<i>Vicks VapoRub. (n.d.). Vicks VapoRub: Cough and cold relief. Procter & Gamble. Retrieved from https://www.vicks.com</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3><b>For Cough/Cold:</b>
+													<br>	• Rub a thick layer on the chest and throat 3-4 times daily.
+													<br>
+													<br>	<b>For Muscle Aches:</b>
+													<br>	• Apply to affected area 3-4 times daily.
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Inhale vapors for nasal decongestion.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/katinko.jpg" alt="Medicine 3">
                 <h2 id="med-name-3">KATINKO</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>KATINKO® Ointment contains Methyl Salicylate, Menthol and Camphor. METHYL SALICYLATE topical (for the skin) is used for temporary relief of muscle or joint pain caused by strains, sprains, arthritis, bruising, or backaches.</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>Apply generously to the affected area as often as required or repeat the application 3 to 4 times daily until relieved. Use this medication as directed by your doctor or follow all directions on the product package. If you have any questions, talk to your doctor or pharmacist.</div>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, headaches, and muscle pain.
+													<br>
+													<br>	🔥 <b>How it works:</b> Provides a cooling sensation that reduces discomfort and stimulates circulation.
+													<br>	
+													<br>	💡 <b>Common use:</b> For dizziness caused by muscle tension or fatigue.
+													<br>
+													<br>	<i>Katinko. (n.d.). Katinko: Ointment for pain relief. Greenstone Pharmaceutical. Retrieved from https://katinko.com.ph</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3><b>Apply generously to the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Avoid applying on broken skin.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/efficascent.png" alt="Medicine 4">
                 <h2 id="med-name-4">EFFICASCENT OIL</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>Efficascent Oil (Extra Strength) is a liniment especially formulated for fast and effective relief of rheumatism back pains, muscular pains, joint pains, lumbago, stiff neck, headache, flatulence, insect bites, minor sprains and strains, cramps, itchiness, and other skin irritations.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Adults and children 3 years of age and older:
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, muscle pain, and tension headaches.
 													<br>
-													<br>	apply to the affected area not more than 3 to 4 times daily.
+													<br>	🔥 <b>How it works:</b> The cooling effect promotes circulation, which reduces dizziness caused by muscle tension.
 													<br>
-													<br>	Children under 3 years of age: Consult a physician.
+													<br>	💡 <b>Common use:</b> For dizziness due to fatigue or muscle stiffness.
 													<br>
-													<br>	D and C Green No. 6, D and C Yellow No.11, Eucalyptus Oil, Light Mineral Oil, Turpentine Oil.</div>
+													<br>	<i>Efficascent Oil. (n.d.). Efficascent Oil: Liniment for pain relief. International Pharmaceuticals, Inc. Retrieved from https://www.efficascentoil.com.ph</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3><b>Apply to the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Inhale vapors for nasal decongestion if dizziness is linked to sinus issues.</div>
             </div>
 			
-        </div>
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/omega.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">OMEGA PAIN KILLER</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, muscle pain, and tension.
+													<br>
+													<br>	🔥 <b>How it works:</b> Provides a warming sensation that relaxes muscles and reduces dizziness caused by tension.
+													<br>
+													<br>	💡 <b>Common use:</b> For dizziness from fatigue or tension.
+													<br>
+													<br>	<i>Omega Pain Killer. (n.d.). Omega Pain Killer: Relief for muscle pain and dizziness. ASC Ref #: I0181P121822O. Retrieved from https://asc.com.ph</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3><b>Apply a small amount on the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Avoid applying on open wounds.</div>
+            </div>
+			
+		</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
 
     <script>
@@ -196,10 +238,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
