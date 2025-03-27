@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -150,34 +149,85 @@
         <div class="grid">
 
             <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/claritin.jpg" alt="Medicine 7">
-                <h2 id="med-name-7">CLARITIN</h2>
-                <div class="description" id="desc-7"><h3>Description</h3>Claritin® provides relief of symptoms that over 200 different allergens can trigger. It offers non-drowsy relief of symptoms caused by allergens like those from pollen, mold, dust, and pets. Claritin® is an antihistamine, so it hinders the cascade triggered by allergens.</div>
-                <div class="guide" id="guide-7"><h3>Guide</h3>Adults and children 6 years and over	1 tablet daily; not more than 1 tablet in 24 hours
-														<br>	Children under 6 years of age	-	Ask a doctor
-														<br>	Consumers with liver or kidney disease	-	Ask a doctor</div>
+                <img src="images/claritin.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">CLARITIN</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves allergy symptoms.
+													<br>	• Reduces sneezing, runny nose, and itchy eyes.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains loratadine, a non-drowsy antihistamine.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For allergic rhinitis and chronic urticaria.
+													<br>	
+													<br>	<i>Bayer. (n.d.). Claritin Product Information.</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+
+													<br>	• Adults and children (6+ years): 1 tablet (10 mg) once daily.
+													<br>	• Children (2-5 years): 5 mL syrup once daily.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed the recommended dose.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Take with water, with or without food.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/benadryl.jpg" alt="Medicine 8">
-                <h2 id="med-name-8">BENADRYl</h2>
-                <div class="description" id="desc-8"><h3>Description</h3>Benadryl® One offers fast, no-drowse, 24-hour allergy relief for adults and children 6 yrs and above. This product is available in 10mg Tablets.</div>
-                <div class="guide" id="guide-8"><h3>Guide</h3>The recommended adult Benadryl dosage for allergies is 1 to 2 tablets or capsules by mouth every 4 to 6 hours as needed. You shouldn't take more than 6 doses (300 mg) in a 24-hour period. OTC Benadryl is only labeled for the relief of mild allergy symptoms.</div>
+                <img src="images/benadryl.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">BENADRYL</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves allergy symptoms and colds.
+													<br>	• Reduces sneezing, runny nose, and itchy throat.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains diphenhydramine, a first-generation antihistamine.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For colds, hay fever, and allergies.
+													<br>	
+													<br>	<i>Johnson & Johnson. (n.d.). Benadryl Product Information.</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults: 25-50 mg every 4-6 hours.
+													<br>	• Children (6-12 years): 12.5-25 mg every 4-6 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed 6 doses in 24 hours.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	May cause drowsiness; avoid driving or operating machinery.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/doctor.jpg" alt="Medicine 3">
                 <h2 id="med-name-3">BETTER CONSULT YOUR DOCTOR</h2>
             </div>
-        </div>
-			
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+
+            </div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
-</body>
-</html>
-<script>
+			
+       
+
+    <script>
 
         function toggleDescription(item) {
             item.classList.toggle('active');
         }
-</script>
+		
+		
+    </script>
+</body>
+</html>
