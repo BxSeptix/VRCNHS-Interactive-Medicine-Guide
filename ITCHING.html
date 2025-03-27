@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,115 +151,264 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/canesten.jpg" alt="Medicine 1">
                 <h2 id="med-name-1">CLOTRIMAZOLE-CANESTEN</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>Known as alipunga, athlete's foot is a fungal skin infection caused by fungi that thrive in warm and moist environments like changing rooms, showers and public pools. Walking barefoot in these places puts you at greater risk. Athlete’s foot usually occurs between your toes, but it can also affect the soles and sides of your feet.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>Apply the cream thinly to the affected area and smooth in gently. Repeat 2-3 times a day for up to 3 or 4 weeks to kill the root of the infection. The length of treatment may vary depending on the kind of infection you have.
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
 														<br>
-														<br>	❕Don’t forget❕
-														<br>	Even if your symptoms seem to be clearing up, you should complete the full course of treatment to ensure the infection is treated.</div>
+														<br>	• Treats athlete's foot, jock itch, and ringworm.
+														<br>	• Effective against fungal skin infections by preventing fungal growth.
+														<br>
+														<br>	🔥 <b>How It Works:</b>
+														<br>	Clotrimazole disrupts the cell membrane of fungi, causing it to weaken and eventually die.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For fungal skin infections and itching.
+														<br>	
+														<br>	<i>Bayer. (n.d.). Canesten Cream: Clotrimazole. Retrieved from Bayer</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Adults and children</b> (≥2 years): Apply a thin layer 2-3 times daily for 3-4 weeks.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Wash and dry the affected area before applying.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/bepanthen.jpg" alt="Medicine 2">
                 <h2 id="med-name-2">BEPATHEN</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>Bepanthen Itch Relief Cream is a steroid-free cream that helps relieve itching and redness in as fast as 30 minutes while promoting skin barrier restoration.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>Bepanthen Itch Relief Cream is free from steroids and may be applied as needed</div>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+														<br>
+														<br>	• Relieves itching caused by dryness, rashes, or mild skin irritation.
+														<br>	• Promotes skin barrier restoration.
+														<br>
+														<br>	🔥 <b>How It Works:</b>
+														<br>
+														<br>	Contains dexpanthenol, which moisturizes and repairs the skin by supporting its natural healing process.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For mild itching, dryness, and skin irritation.
+														<br>
+														<br>	<i>Bayer. (n.d.). Bepanthen Itch Relief Cream. Retrieved from Bayer</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply 1-2 times daily or as needed.</b>
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Massage gently onto the affected area.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/calamine.jpg" alt="Medicine 3">
                 <h2 id="med-name-3">CALAMINE-CHLORELIEF</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>ChloRelief is an over-the-counter (OTC), non-steroidal lotion that is a first-aid treatment to any itch and rash. Calamine, one of the main ingredients of the lotion, has been proven for years to be mild, safe and effective in providing instant relief to itch and rash brought about by various factors such as insect bites or stings, sunburn, chickenpox, measles, razor burn, eczema or skin asthma, diaper rash, prickly heat, psoriasis, and itch as side effect of hemodialysis. ChloRelief also contains Eucalyptus extract that provides a mild cooling and calming effect to the skin</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>The main benefit of calamine lotion is that it can relieve itchiness. Poisonous plants such as poison ivy, poison oak and poison sumac can cause itching and skin irritation. Calamine lotion for poison ivy and other poisonous plants can help relieve the itch, along with any pain or discomfort. In addition, it can help dry up any oozing or weeping that can develop on your skin due to the irritation. Other calamine lotion uses include:
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b>
 														<br>
-														<br>	• Bug bites: You can apply calamine lotion to insect bites and stings to help with mild reactions. Apply the lotion several times a day until your symptoms clear up or the bug bites are gone.
-														<br>	• Chickenpox: You can use calamine lotion to help relieve the symptoms of this infectious condition. It can also prevent further skin infections.
-														<br>	• Shingles: Along with antiviral medicines, you can use calamine lotion for shingles. Apply the lotion directly to your skin to get some relief from the symptoms of this condition.
-														<br>	• Swimmer’s itch: You can use calamine lotion for rashes like swimmer’s itch. You can develop this skin condition if you swim in water containing certain parasites.
-														<br>	• Heat rash: You can use calamine lotion for heat rash as well. A heat rash is an area of your skin that becomes irritated when sweat gets trapped in your pores and ducts beneath your skin.
-														<br>	• Scabies: A small mite can cause a skin condition called scabies. To ease the itching from scabies, you can try applying calamine lotion. It can help relieve your symptoms but it won’t kill the mites.
-														<br>	• Chigger bites: Chiggers are a type of mite that feeds on human skin. Their bites can cause skin irritation and itching. You can apply calamine lotion to help relieve the itching.
-														<br>	• Acne: You may be able to use calamine lotion for acne. While it won’t treat your acne, it may help dry out a pimple if you use it as a spot treatment.
-														<br>	• Hives: You can develop hives for many different reasons. Calamine lotion for hives can help relieve the itching caused by this skin condition.</div>
+														<br>	Relieves itching due to rashes, insect bites, and minor skin irritations.
+														<br>
+														<br>	🔥 <b>How It Works:</b>
+														<br>
+														<br>	Forms a protective barrier on the skin, reducing irritation and preventing further itching.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For insect bites, chickenpox, and minor skin rashes.
+														<br>
+														<br>	<i>Unilab. (n.d.). Chlorelief Calamine Lotion. Retrieved from Unilab</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply to the affected area 2-3 times daily.</b>
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Shake the bottle before application.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/memecort.jpg" alt="Medicine 4">
                 <h2 id="med-name-4">MOMETASONE-MOMECORT</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>Mometasone furoate belongs to a group of medicines called topical corticosteroids, which are used on the skin to relieve inflammation (e.g., swelling, redness) and itch caused by certain skin problems. Mometasone furoate cream and ointment are classified as medium potency topical corticosteroids.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Directions for Use: Rub a thin layer of mometasone cream or ointment to affected areas of the skin once a day, or as directed by a doctor. Do not use on the face for longer than 5 days. Do not use for longer than 5 days in children, unless directed by a doctor.</div>
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b>
+														<br>
+														<br>	Relieves itching, redness, and inflammation caused by eczema and psoriasis.
+														<br>
+														<br>	🔥 <b>How It Works:</b>
+														<br>
+														<br>	A corticosteroid that reduces inflammation by suppressing the immune response.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For eczema, psoriasis, and skin inflammation.
+														<br>
+														<br>	<i>MSD. (n.d.). Mometasone Furoate Cream. Retrieved from MSD</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply once daily.</b>
+														<br>
+														<br>	🚫 <b>Usage Limit:</b> Avoid prolonged use on the face.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Use a thin layer on the affected area.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/mometasone.jpg" alt="Medicine 5">
                 <h2 id="med-name-5">UNITED HOME-DERMATEC</h2>
-                <div class="description" id="desc-5"><h3>Description</h3>Mometasone furoate belongs to a group of medicines called topical corticosteroids, which are used on the skin to relieve inflammation (e.g., swelling, redness) and itch caused by certain skin problems. Mometasone furoate cream and ointment are classified as medium potency topical corticosteroids.</div>
-                <div class="guide" id="guide-5"><h3>Guide</h3>Directions for Use: Rub a thin layer of mometasone cream or ointment to affected areas of the skin once a day, or as directed by a doctor. Do not use on the face for longer than 5 days. Do not use for longer than 5 days in children, unless directed by a doctor.</div>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b>
+														<br>
+														<br>	Relieves inflammation, redness, and itching associated with skin conditions.
+														<br>
+														<br>	🔥 <b>How It Works:</b>
+														<br>
+														<br>	A medium-potency corticosteroid that reduces inflammation and suppresses itching.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For eczema, rashes, and skin conditions.
+														<br>
+														<br>	<i>United Laboratories. (n.d.). United Home Dermatec. Retrieved from Unilab</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply thinly once daily.</b>
+														<br>
+														<br>	🚫 <b>Usage Limit: Avoid prolonged use.</b>
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Do not cover the treated area with bandages.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/nizoral.jpg" alt="Medicine 6">
                 <h2 id="med-name-6">KETOCONAZOLE-NIZORAL</h2>
-                <div class="description" id="desc-6"><h3>Description</h3>Ketoconazole shampoo is an antifungal medication. It treats fungal or yeast infections in your skin. You can use this medicated shampoo as you would use a regular shampoo by massaging it into your skin. Follow the label for directions on how long you should let the product set before rinsing it off.</div>
-                <div class="guide" id="guide-6"><h3>Guide</h3>How to use ketoconazole cream
-														<br>	1. Wash and dry the infected area of skin. If you're treating your feet, make sure you dry between your toes.
-														<br>	2. Use your own towel or flannel. This stops you passing the infection on to anyone else.
-														<br>	3. Gently rub the cream into the infected area and surrounding skin. You'll usually need a small amount, depending on the size of the area you're treating. Be careful not to let the cream get into your eyes or mouth. If it does get into your eyes or mouth, rinse them with water.
-														<br>	4. Wash your hands afterwards. This stops you spreading the infection to other parts of your body or other people.
-														<br>	If you're using any other creams, ointments or lotions on the same area of skin, do not put them on at the same time as ketoconazole cream. After putting on the ketoconazole cream, wait 30 minutes before you use different products on the same area. This gives the ketoconazole time to be absorbed into your skin.</div>
+                <div class="description" id="desc-6"><h3>Description</h3>💊 <b>Purpose:</b>
+														<br>
+														<br>	Treats fungal infections like ringworm, athlete's foot, and dandruff.
+														<br>
+														<br>	🔥 <b>How It Works:</b>
+														<br>
+														<br>	Inhibits fungal cell membrane synthesis, preventing growth and spread.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For fungal skin infections and itching.
+														<br>
+														<br>	<i>Johnson & Johnson. (n.d.). Nizoral Cream. Retrieved from Johnson & Johnson</i></div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply once daily for 2-4 weeks.</b>
+														<br>
+														<br>	🚫 <b>Usage Limit:</b> Do not use for more than 4 weeks without consulting a doctor.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Keep the affected area clean and dry.</div>
 			</div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/rashfree.jpg" alt="Medicine 7">
                 <h2 id="med-name-7">ZINC OXIDE-RASH FREE</h2>
-                <div class="description" id="desc-7"><h3>Description</h3>This medicine contains zinc oxide, a skin protectant. Zinc oxide acts as a physical barrier that soothes the skin and prevents it from coming into direct contact with external irritants. This protective effect prevents worsening of the condition and promotes the normal healing processes of the skin.</div>
-                <div class="guide" id="guide-7"><h3>Guide</h3>Directions for Use
+                <div class="description" id="desc-7"><h3>Description</h3>💊 <b>Purpose:</b>
 														<br>
-														<br>	Wash hands before and after each application.
+														<br>	Relieves diaper rash and minor skin irritations.
 														<br>
-														<br>	For diaper rash:
-														<br>	• Change wet and soiled diapers promptly.
-														<br>	• Clean the diaper area and allow it to dry.
-														<br>	• Apply zinc oxide ointment as often as necessary, with every diaper change, particularly at bedtime or when the skin may be exposed to wet diapers for a long period of time.
+														<br>	🔥 <b>How It Works:</b>
 														<br>
-														<br>	For other minor skin conditions:
-														<br>	• Clean the affected and surrounding areas of the skin with mild soap.
-														<br>	• Rinse thoroughly with water and pat dry.
-														<br>	• Apply a sufficient amount of zinc oxide ointment and rub gently on the affected areas of the skin once or twice daily. Use gauze dressing when needed.
-														<br>	Or, as directed by a doctor.
-														<br>	
-														<br>	For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+														<br>	Forms a protective barrier on the skin, reducing friction and irritation.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For diaper rash, minor burns, and skin irritations.
+														<br>
+														<br>	<i>United Laboratories. (n.d.). Rash Free Ointment. Retrieved from Unilab</i></div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply 1-2 times daily or as needed.</b>
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Clean the affected area before application.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/mometasoneelica.jpg" alt="Medicine 8">
                 <h2 id="med-name-8">MOMETASONE-ELICA</h2>
-                <div class="description" id="desc-8"><h3>Description</h3>This cream is the solution, with a formula that contains mometasone, a cortisone derivative that is known for fighting itching and dermatitis. Activates natural substances in the skin to reduce redness and irritation.</div>
-                <div class="guide" id="guide-8"><h3>Guide</h3>Read the Patient Information Leaflet if available from your pharmacist before you start using this medication and each time you get a refill. If you have any questions, ask your doctor or pharmacist.
+                <div class="description" id="desc-8"><h3>Description</h3>💊 <b>Purpose:</b>
 														<br>
-														<br>	This medication is for use only on certain areas of skin: do not use it on the face, groin, or underarms, or for diaper rash, unless directed to do so by your doctor.
-														<br>	
-														<br>	Wash and dry your hands before using. Clean and dry the affected area. Apply as directed by your doctor, usually a thin film of medication to the affected area once daily. Gently rub in. Do not cover the treated area with bandages or other dressings unless instructed to do so by your doctor.
+														<br>	Treats eczema and psoriasis, reducing itching and inflammation.
 														<br>
-														<br>	Do not wash or rinse the medication off immediately after applying it. Wash your hands with soap and water after each use unless you are using this medication to treat the hands. Avoid getting this medication in your eyes, nose, or mouth. If this occurs, rinse thoroughly with water and call your doctor if irritation lasts.</div>
+														<br>	🔥 <b>How It Works:</b>
+														<br>
+														<br>	A corticosteroid that reduces immune response and inflammation.
+														<br>
+														<br>	💡 <b>Common Use:</b>
+														<br>
+														<br>	For itching, redness, and inflammation.
+														<br>
+														<br>	<i>MSD. (n.d.). Elica Cream. Retrieved from MSD</i></div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>
+														<br>	<b>Apply once daily.</b>
+														<br>
+														<br>	🚫 <b>Usage Limit:</b> Avoid prolonged use on the face.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Use a thin layer.</div>
 			</div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images1/mupirocin.jpg" alt="Medicine 9">
-                <h2 id="med-name-9">MUPIROCIN-MICROSCOT</h2>
-                <div class="description" id="desc-9"><h3>Description</h3>Mupirocin is an antibacterial ointment used to treat impetigo and secondary skin infections caused by Staphylococcus aureus and Streptococcus pyogenes. Mupirocin, formerly termed pseudomonic acid A, 1 is a novel antibacterial agent with a unique chemical structure and mode of action apart from other antibiotic agents.</div>
-                <div class="guide" id="guide-9"><h3>Guide</h3>This medication is for external use only. Do not take by mouth. Wash your hands before and after use. If you are treating a hand infection, only wash your hands before use. Do not get it in your eyes. If you do, rinse your eyes with plenty of cool tap water. Use it as directed on the prescription label at the same time every day. Do not use it more often than directed. Use the medication for the full course as directed by your care team, even if you think you are better. Do not stop using it unless your care team tells you to stop it early.
-														<br>
-														<br>	Apply a thin film of the medication to the affected area. You can cover the area with a sterile gauze dressing (bandage). Do not use an airtight bandage (such as a plastic-covered bandage).
-														<br>	
-														<br>	Talk to your care team about the use of this medication in children. While it may be prescribed for children for selected conditions, precautions do apply.
-														<br>
-														<br>	⚠️Overdosage: If you think you have taken too much of this medicine contact a poison control center or emergency room at once.
-														<br>
-														<br>	NOTE: This medicine is only for you. Do not share this medicine with others.</div>
-            </div>         			
+                <img src="images/efficascent.png" alt="Medicine 9">
+                <h2 id="med-name-9">EFFICASCENT OIL</h2>
+                <div class="description" id="desc-9"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, muscle pain, and tension headaches.
+													<br>
+													<br>	🔥 <b>How it works:</b> The cooling effect promotes circulation, which reduces dizziness caused by muscle tension.
+													<br>
+													<br>	💡 <b>Common use:</b> For dizziness due to fatigue or muscle stiffness.
+													<br>
+													<br>	<i>Efficascent Oil. (n.d.). Efficascent Oil: Liniment for pain relief. International Pharmaceuticals, Inc. Retrieved from https://www.efficascentoil.com.ph</i></div>
+                <div class="guide" id="guide-9"><h3>Guide</h3><b>Apply to the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Inhale vapors for nasal decongestion if dizziness is linked to sinus issues.</div>
+            </div>
+
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/katialis.jpg" alt="Medicine 10">
+                <h2 id="med-name-10">KATIALIS OINTMENT</h2>
+                <div class="description" id="desc-10"><h3>Description</h3>💊 <b>Purpose:</b> Treats itching, rashes, and fungal infections.
+													<br>
+													<br>	🔥 <b>How it works:</b> Contains sulfur and salicylic acid, which help reduce inflammation and kill fungi.
+													<br>
+													<br>	💡 <b>Common use:</b> For skin infections and fungal conditions.
+													<br>
+													<br>	<i>Katialis. (n.d.). Katialis Ointment. Retrieved from Katialis</i></div>
+                <div class="guide" id="guide-10"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	<b>Apply thinly 2-3 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b>  Avoid applying on open wounds.</div>
+            </div>      	
 			
-        </div>
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/sebo.jpg" alt="Medicine 11">
+                <h2 id="med-name-11">APOLLO SEBO DE MACHO</h2>
+                <div class="description" id="desc-11"><h3>Description</h3>💊 <b>Purpose:</b> Prevents scarring and soothes itchy skin.
+													<br>
+													<br>	🔥 <b>How it works:</b> Moisturizes and softens skin.
+													<br>
+													<br>	💡 <b>Common use:</b> For scars and minor skin itching.
+													<br>
+													<br>	<i>Apollo. (n.d.). Apollo Sebo de Ma*cho*. Retrieved from Apollo</i></div>
+                <div class="guide" id="guide-11"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	<b>Apply thinly 2-3 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Avoid applying on open wounds.</div>
+            </div>
+
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/wangsoap.jpg" alt="Medicine 12">
+                <h2 id="med-name-12">DR. S. WANG'S SOAP</h2>
+                <div class="description" id="desc-12"><h3>Description</h3>💊 <b>Purpose:</b> Relieves itching, rashes, and skin irritations.
+													<br>
+													<br>	🔥 <b>How it works:</b> Contains natural herbal extracts that soothe and cleanse the skin.
+													<br>
+													<br>	💡 <b>Common use:</b> For skin itchiness and irritation.
+													<br>
+													<br>	<i>Mr. Wang. (n.d.). Wang Itch Relief Soap. Retrieved from Mr. Wang</i></div>
+                <div class="guide" id="guide-12"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	<b>Use during bathing, gently lather on the skin.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Rinse thoroughly with water.</div>
+            </div> 
+			
+			</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
 
     <script>
@@ -269,10 +417,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
