@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,50 +151,59 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/Buscopan.jpg" alt="Medicine 1">
                 <h2 id="med-name-1">BUSCOPAN</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>Buscopan relieves painful stomach cramps, including those linked with irritable bowel syndrome (IBS). It can also help bladder cramps and period pain. Buscopan contains the active ingredient hyoscine butylbromide.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>Each Buscopan tablet contains 10mg of hyoscine butylbromide. Buscopan tablets are all the same strength whether you get them on prescription or whether you buy them as Buscopan Cramps or Buscopan IBS Relief.
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b> Relieves stomach cramps, spasms, and discomfort linked to irritable bowel syndrome (IBS).
 														<br>
-														<br>	The usual dose of Buscopan for stomach cramps (or cramping pain) in adults and children aged 12 years and over is 2 tablets, taken 4 times a day.
+														<br>	🔥 <b>How it works:</b> Acts as an antispasmodic by relaxing the muscles in the stomach and intestines.
 														<br>
-														<br>	For children aged 6 to 11 years, the usual dose is 1 tablet, taken 3 times a day.
+														<br>	💡 <b>Common use:</b> For stomach pain, cramps, and IBS.
+														<br>	
+														<br>	<i>Buscopan. (n.d.). Hyoscine Butylbromide: Treatment for stomach cramps and IBS. Sanofi. Retrieved from https://www.sanofi.com</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>	<b>Adults and children</b> (≥12 years): 2 tablets 4 times daily.
 														<br>
-														<br>	The usual dose of Buscopan for symptoms of irritable bowel syndrome (IBS) diagnosed by a doctor in adults and children aged 12 years and over is 1 tablet, taken 3 times a day. You can increase this to 2 tablets, taken 4 times a day if needed.</div>
+														<br>	<b>Children (6–11 years):</b> 1 tablet 3 times daily.
+														<br>
+														<br>	🚫 <b>Maximum dose:</b> 6 tablets per day.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Take with water before or after meals.</div>
+			</div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/Kremil.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">KREMIL-S</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b> Relieves hyperacidity, indigestion, and bloating.
+														<br>
+														<br>	🔥 <b>How it works:</b>
+														<br>	• Simethicone: Reduces gas and bloating.
+														<br>	• Aluminum hydroxide & magnesium hydroxide: Neutralize stomach acid.
+														<br>
+														<br>	💡 <b>Common use:</b> For acid reflux, heartburn, and indigestion.
+														<br>
+														<br>	<i>Kremil-S. (n.d.). Antacid and anti-flatulent for hyperacidity and indigestion. Unilab. Retrieved from https://www.unilab.com.ph</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>	<b>Adults:</b> 1–2 tablets after meals and before bedtime.
+														<br>
+														<br>	🚫 <b>Maximum dose:</b> 8 tablets per day.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Chew thoroughly before swallowing.</div>
 			</div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/hydrochloride.jpg" alt="Medicine 2">
-                <h2 id="med-name-2">DICYCLOVERINE</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>Dicycloverine hydrochloride Tablets work by relaxing the muscles in your stomach and gut (intestine). It stops sudden muscle contractions (spasms). In doing this, it relieves cramps, pain, bloating, wind and discomfort.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>The usual adult dose of dicycloverine is one 10 mg tablet, or one 5 ml spoonful of liquid medicine, three times a day. If dicycloverine has been prescribed for you by a doctor, your dose may be different to this, in which case take it exactly as your doctor tells you to. Swallow the tablets with a drink of water.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/Kremil.jpg" alt="Medicine 3">
-                <h2 id="med-name-3">KREMIL-S</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>Kremil-S Tablet is for milder symptoms of hyperacidity/acidity, and it also relieves gassiness. It neutralizes stomach acid in as fast as 5 minutes and relief lasts up to 2 hours. Kremil-S Advance is treatment for more severe symptoms of hyperacidity and heartburn.</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>Kremil-S Tablet
-														<br>	Adults: Take 1 to 2 tablets - after meals and at bedtime, or as prescribed by a doctor. Maximum dose of 8 tablets per day.
+                <img src="images/diatabs.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">DIATABS</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b> Treats acute diarrhea by reducing bowel movement.
 														<br>
-														<br>	Kremil-S Advance
-														<br>	Adults and Children 12 years and older: Take 1 tablet as needed, with a maximum of 2 tablets every 24 hours, or as directed by a doctor. Maximum dose of 2 tablets per day.
+														<br>	🔥 <b>How it works:</b> Slows down intestinal movement, allowing more water to be absorbed and reducing stool frequency.
 														<br>
-														<br>	Kremil-S Cool Relief
-														<br>	Adults and Children 12 years and older: Take 10 to 20 mL (1-2 sachets) after meals and before bedtime, up to four times a day.
-														<br>	Children 6 to 11 years old: Take 5 to 10 mL (1 sachet) after meals and before bedtime.</div>
-			</div>
-
-            <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/diatabs.jpg" alt="Medicine 4">
-                <h2 id="med-name-4">DIATABS</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>This medicine contains loperamide, an antidiarrheal agent which slows intestinal movement and reduced fluid and salt loss in the intestines, resulting in improved stool consistency.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>For Symptomatic Relief of Acute Diarrhea: Adult Dose: Take 2 capsules initially followed by 1 capsule after each loose bowel movement. Or, as directed by a doctor. Maximum dose is 16 mg (8 capsules) per day. Discontinue if there is no improvement after 2 days.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images1/omepron.jpg" alt="Medicine 5">
-                <h2 id="med-name-5">OMEPRON</h2>
-                <div class="description" id="desc-5"><h3>Description</h3>This medicine contains omeprazole which works by decreasing the amount of acid produced in the stomach. Omeprazole is used for the short-term treatment and symptomatic relief of heartburn that occurs two or more days per week (frequent heartburn).</div>
-                <div class="guide" id="guide-5"><h3>Guide</h3>Adults—20 milligrams (mg) once a day before a meal. Your doctor may want you to take omeprazole for more than 8 weeks for certain conditions. Children 1 year of age and older—Dose is based on body weight and must be determined by your doctor. The dose is usually 5 to 20 mg once a day before a meal.</div>
+														<br>	💡 <b>Common use:</b> For diarrhea and loose bowel movements (LBM).
+														<br>
+														<br>	<i>Diatabs. (n.d.). Loperamide: Antidiarrheal medication. Lloyd Laboratories. Retrieved from https://www.lloydlaboratories.com</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>	<b>Adults:</b> 2 capsules initially, then 1 capsule after each loose stool.
+														<br>
+														<br>🚫 <b>Maximum dose:</b> 8 capsules per day.
+														<br>
+														<br>✅ <b>Usage Tip:</b> Discontinue if no improvement after 48 hours.</div>
             </div>
 			
         </div>
