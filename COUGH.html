@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Guide</title>
-    <style>
+     <style>
 
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,145 +151,348 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/robitussin.jpg" alt="Medicine 1">
                 <h2 id="med-name-1">ROBITUSSIN-TABLET</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>Robitussin is an expectorant. It helps loosen congestion in your chest and throat, making it easier to cough out through your mouth. Robitussin is used to reduce chest congestion caused by the common cold, infections, or allergies. It may also be used for purposes not listed in this medication guide.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>Use exactly as directed on the label, or as prescribed by your doctor. Do not use in larger or smaller amounts or for longer than recommended.
-														<br>
-														<br>	Do not give this medication to a child younger than 4 years old. Always ask a doctor before giving a cough or cold medicine to a child. Death can occur from the misuse of cough and cold medicines in very young children.
-														<br>
-														<br>	Drink extra fluids to help loosen the congestion and lubricate your throat while you are taking this medication.
-														<br>	
-														<br>	Take Robitussin with food if it upsets your stomach.
-														<br>
-														<br>	Measure the liquid form of Robitussin with a special dose-measuring spoon or cup, not a regular table spoon. If you do not have a dose-measuring device, ask your pharmacist for one.
-														<br>
-														<br>	Do not crush, chew, break, or open a controlled-release, delayed-release, or extended-release tablet or capsule. Swallow it whole. Breaking or opening the pill may cause too much of the drug to be released at one time.
-														<br>
-														<br>	Store at room temperature away from moisture, heat, and direct sunlight.</div>
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves chest congestion and loosens mucus.
+													<br>	• Eases cough due to cold or allergies.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains guaifenesin, an expectorant that thins and loosens mucus.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For coughs associated with colds or minor throat irritation.
+													<br>
+													<br>	<i>Pfizer Consumer Healthcare. (n.d.). Robitussin Product Information.</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 1-2 tablets every 4-6 hours.
+													<br>	• Children: Consult a doctor for dosage.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed 6 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Drink plenty of fluids to help loosen mucus.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/robitussinchildren.png" alt="Medicine 2">
                 <h2 id="med-name-2">ROBITUSSIN-CHILDREN</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>When your little one is under the weather, helping them feel better is a parent’s number one goal. Thankfully, there’s Children’s Robitussin, a range of products for cold and cough relief for kids. Identify your child’s symptoms to help choose the Children’s Robitussin product that will help them with their symptoms, so they can get back to being kids.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>do not take more than 6 doses in any
-														<br>	24-hour period
-														<br>	■ measure only with dosing cup provided
-														<br>	■ keep dosing cup with product
-														<br>	■ mL = milliliter</div>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves cough 
+													<br>	• Reduces throat irritation.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains guaifenesin to thin mucus and dextromethorphan to suppress cough.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For cough relief in children.
+													<br>
+													<br>	<i>Pfizer Consumer Healthcare. (n.d.). Robitussin Children’s Cough Syrup.</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Children (6-12 years): 5-10 mL every 4 hours.
+													<br>	• Children (2-5 years): 2.5-5 mL every 4 hours.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not give to children under 2 years without a doctor’s advice.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Use the provided measuring device for accurate dosage.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/robitussinadult.png" alt="Medicine 3">
                 <h2 id="med-name-3">RUBITUSSIN-ADULT</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>Find powerful relief from cough and chest congestion, along with a bright taste of real elderberries for a soothing impact. Every dose of this formula is crafted to control coughs and help clear chest congestion without any artificial colors, dyes, or gluten.</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>do not take more than 4 doses (8 chewable tablets)
-														<br>	in any 24-hour period
-														<br>	■ this adult product is not intended for use in children
-														<br>	under 12 years of age</div>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves cough and chest congestion.
+													<br>	• Reduces mucus build-up.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains guaifenesin and dextromethorphan for dual relief.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For adults with persistent cough.
+													<br>
+													<br>	<i>Pfizer Consumer Healthcare. (n.d.). Robitussin Adult Cough Syrup.</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	Adults: 10 mL every 4 hours.
+													<br>
+													<br>	Maximum: 60 mL in 24 hours.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed the recommended dose.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Take with food if it upsets your stomach.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/plemex.jpg" alt="Medicine 4">
                 <h2 id="med-name-4">PLEMEX</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>Relief of cough due to common colds, flu, and bronchospasm associated with asthma, bronchitis, and other lung disorders.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Plemex Forte cap Adult 1 cap tid-qid. Plemex Forte syr Adult 5 mL (1 tsp) tid-qid. Plemex For Kids syr Childn >40 kg 2 tsp tid, 7-12 yr (20-40 kg) 1 tsp 4 hrly, 5-6 yr (15.5-20 kg) 1 tsp tid, 2-4 yr (10-15.5 kg) ½-1 tsp tid.</div>
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves cough due to colds, flu, and bronchitis.
+													<br>	• Loosens mucus and clears airways.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains lagundi (Vitex negundo) with expectorant properties.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For cough with phlegm.
+													<br>
+													<br>	<i>Pascual Laboratories. (n.d.). Plemex Cough Syrup.</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 5 mL syrup 3-4 times daily.
+													<br>	• Children: 2.5 mL syrup 3-4 times daily.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Consult a doctor if symptoms persist.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Shake well before use.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/tuseran.jpg" alt="Medicine 5">
                 <h2 id="med-name-5">TUSERAN FORTE</h2>
-                <div class="description" id="desc-5"><h3>Description</h3>Tuseran® Forte contains a Total Cough Relief Formula that relieves dry, non-stop cough, itchy throat (due to postnasal drip) and throat pain.</div>
-                <div class="guide" id="guide-5"><h3>Guide</h3>How much and how often should you use Tuseran® Forte? Adults and Children Orally, 1 capsule every 6 hours, as recommended by a doctor. Use with caution in patients with high blood pressure, toxic goiter, benign prostatic hypertrophy, heart rate irregularity, glaucoma, and in those taking antidepressants.</div>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves dry, non-stop cough.
+													<br>	• Reduces throat pain and itchiness.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Combines dextromethorphan, phenylpropanolamine, and paracetamol.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For dry cough with throat irritation.
+													<br>
+													<br>	<i>Unilab. (n.d.). Tuseran Forte.</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 1 capsule every 6 hours. 
+													<br>	• Children: Not recommended for children.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed 4 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Avoid using with other decongestants.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/solmux.jpg" alt="Medicine 6">
                 <h2 id="med-name-6">SOLMUX-SYRUP</h2>
-                <div class="description" id="desc-6"><h3>Description</h3>This medicine is a mucolytic agent used to relive cough characterized by excessive sticky sputum or phlegm to help treat respiratory tract disorders such as acute bronchitis.</div>
-                <div class="guide" id="guide-6"><h3>Guide</h3>How much and how often should you use this medicine? Orally, 5 mL (1 teaspoonful), every 8 hours. Or, as directed by a doctor. For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+                <div class="description" id="desc-6"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves cough with sticky phlegm.
+													<br>	• Clears airway congestion.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains carbocisteine, a mucolytic agent.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For cough with thick mucus.
+													<br>
+													<br>	<i>Unilab. (n.d.). Solmux Syrup.</i></div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 5 mL every 8 hours.
+													<br>	• Children: 2.5-5 mL every 8 hours.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed 3 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Take with food to prevent stomach upset.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/solmuxtablet.jpg" alt="Medicine 7">
                 <h2 id="med-name-7">SOLMUX-TABLET</h2>
-                <div class="description" id="desc-7"><h3>Description</h3>Carbocisteine (Solmux) is a mucolytic agent used to relieve cough characterized by excessive or sticky sputum or phlegm to help treat respiratory tract disorders such as acute bronchitis.</div>
-                <div class="guide" id="guide-7"><h3>Guide</h3>Orally, 1 capsule every 8 hours. Or, as directed by a doctor.</div>
+                <div class="description" id="desc-7"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Treats cough with thick phlegm.
+													<br>	• Reduces airway congestion.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains carbocisteine, a mucolytic agent.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For productive cough.
+													<br>
+													<br>	<i>Unilab. (n.d.). Solmux Tablet.</i></div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 1 tablet every 8 hours.
+													<br>	• Children: Not recommended.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Maximum of 3 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Take with plenty of water.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/neozep.jpg" alt="Medicine 8">
                 <h2 id="med-name-8">NEOZEP</h2>
-                <div class="description" id="desc-8"><h3>Description</h3>Phenylephrine HCl a nasal decongestant clears obstructed air passages and nasal sinuses due to congestion making breathing easier. It also reduces postnasal drip. Chlorphenamine Maleate, an anti-allergy, relieves symptoms such as runny nose, sneezing, and itchy, watery eyes.</div>
-                <div class="guide" id="guide-8"><h3>Guide</h3>Adults: Orally, 1 tablet every 6 hours, or as recommended by a doctor. Neozep Z+ Forte provides the maximum daily intake of zinc when taken at the recommended dose of 4 times a day. To avoid excessive intake, refrain from using other supplements or medicines containing zinc.</div>
+                <div class="description" id="desc-8"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves cough, cold, and flu symptoms.
+													<br>	• Reduces nasal congestion.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Combines phenylephrine, paracetamol, and chlorphenamine.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For cold and cough relief.
+													<br>
+													<br>	<i>Unilab. (n.d.). Neozep Forte.</i></div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 1 tablet every 6 hours.
+													<br>	• Children (6-12 years): ½ tablet every 6 hours.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed 4 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Avoid alcohol while taking this medication.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/ambroxol.jpg" alt="Medicine 9">
                 <h2 id="med-name-9">AMBROXOL</h2>
-                <div class="description" id="desc-9"><h3>Description</h3>Ambroxol is a medication indicated for airway secretion clearance therapy. Ambroxol is a secretolytic agent used in the treatment of respiratory diseases associated with viscid or excessive mucus. It is the active ingredient of Mucosolvan, Lasolvan or Mucoangin.</div>
-                <div class="guide" id="guide-9"><h3>Guide</h3>Adults: normal dosage from 30 mg (one tablet of Ambroxol) to 120 mg (4 tablets of Ambroxol) taken in 2 to 3 divided doses. Kids 2 to 5 years of age: half a teaspoon of Ambroxol syrup three times a day. Children 5 years and older: one teaspoon of Ambroxol syrup 2-3 times a day.</div>
-            </div>
+                <div class="description" id="desc-9"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Clears mucus from the airways.
+													<br>	• Treats respiratory conditions with thick phlegm.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains ambroxol hydrochloride, a mucolytic agent.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For cough with phlegm.
+													<br>
+													<br>	<i>Sanofi. (n.d.). Ambroxol Mucosolvan.</i></div>
+                <div class="guide" id="guide-9"><h3>Guide</h3>✅ <b>Dosage:</b>
+								<br>
+													<br>	• Adults: 30 mg tablet 2-3 times daily.
+													<br>	• Children: 7.5 mg syrup every 8 hours.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed the recommended dose.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Take after meals.</div>
+			</div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/sinecod.jpg" alt="Medicine 10">
                 <h2 id="med-name-10">BUTAMIRATE-SINECOD</h2>
-                <div class="description" id="desc-10"><h3>Description</h3>Butamirate (or brospamin, trade names Acodeen, Codesin, Pertix, Sinecod, Sinecoden, Sinecodix) is a cough suppressant. It has been marketed in Europe and Mexico, but not in the United States.</div>
-                <div class="guide" id="guide-10"><h3>Guide</h3>Adults: 1 tablet 3 times daily (at least 8 hours between doses). To be swallowed whole. Maximum daily dose: 3 tablets (150 mg). Overdose with butamirate (Sinecod) may cause the following symptoms: somnolence, nausea, vomiting, diarrhea, dizziness and low blood pressure.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/formula44.jpg" alt="Medicine 11">
-                <h2 id="med-name-11">VICKS-FORMULA 44</h2>
-                <div class="description" id="desc-11"><h3>Description</h3>This combination product is used for the temporary relief of cough, sneezing, or runny nose due to the common cold, hay fever or other upper respiratory allergies. This product contains a non-opioid cough suppressant (such as chlophedianol, dextromethorphan).</div>
-                <div class="guide" id="guide-11"><h3>Guide</h3>Directions
-															<br>	1. adults and children 12 years and over: dissolve 1 drop slowly in the mouth. Repeat every 2 hours as needed or as directed by a doctor.
-															<br>	2. children under 12 years of age: do not use.</div>
-            </div>
-
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-hexetidine.png" alt="Medicine 12">
-                <h2 id="med-name-12">BACTIDOL</h2>
-                <div class="description" id="desc-12"><h3>Description</h3>Hexetidine (Bactidol) 0.1% Solution is indicated for its antibacterial and antifungal action in the following circumstances: Minor oropharyngeal infections and inflammatory conditions including candidiasis. As an aid in the prevention and treatment of gingivitis.</div>
-                <div class="guide" id="guide-12"><h3>Guide</h3>Gargle 2x a day for 24 hr protection.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-dichlotobenzyl alcohol+amylmetacresol.png" alt="Medicine 13">
-                <h2 id="med-name-13">BACTIDOL</h2>
-                <div class="description" id="desc-13"><h3>Description</h3> Sore throat is one of the most common complaints brought to the attention of otolaryngologists. It may be symptomatic of a variety of illnesses, which is why the treatment must be matched to the individual. 
-															<br>
-															<br>	Taking Lozenges is a convenient, affordable option for symptomatic treatment of acute and chronic pharyngitis, irritation or inflammation of the upper respiratory tract and relief of unpleasant postoperative sensation in the throat. 
-															<br>	
-															<br>	Bactidol Extra Soothing Lozenges provides flavorful and convenient relief from sore throat. Comes in Orange and Honey Lemon Flavor. Available in packs of 8 and 16 Lozenges.</div>
-                <div class="guide" id="guide-13"><h3>Guide</h3>1 lozenge every 2-3 hours with a maximum daily dose of 8 lozenges.</div>
+                <div class="description" id="desc-10"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves dry cough.
+													<br>	• Reduces throat irritation.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains butamirate citrate, a cough suppressant.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For dry, irritating cough.
+													<br>
+													<br>	<i>Novartis. (n.d.). Sinecod Product Information.</i></div>
+                <div class="guide" id="guide-10"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 1 tablet 3 times daily.
+													<br>	• Children: Consult a doctor.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed 3 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Swallow tablets whole with water.</div>
             </div>
 
-            <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-ammonium chloride+diphenhydramine hcl.png" alt="Medicine 14">
-                <h2 id="med-name-14">BACTIDOL</h2>
-                <div class="description" id="desc-14"><h3>Description</h3>Itchy or Dry Cough can be caused by the inflammation of your throat and upper airways, which results in a tickling sensation.
-															<br>
-															<br>	This type of cough comes with little to no phlegm or mucus. Sometimes, you also develop sore throat due to frequent coughing.</div>
-                <div class="guide" id="guide-14"><h3>Guide</h3>Adult and children older than 12 years:
-															<br>	10 mL (2 teaspoons) every 4 hours. Don't exceed 6 doses in a day.
-															<br>	
-															<br>	Children aged 6 to less then 12 years:
-															<br>	5 mL (1 teaspoon) every 4 hours. Don't exceed 6 doses in a day.</div>
-            </div>
-			
 			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bactidol-guaifenesin+bromhexine hcl.png" alt="Medicine 15">
-                <h2 id="med-name-15">BACTIDOL</h2>
-                <div class="description" id="desc-15"><h3>Description</h3>Heavy or Cough with Phlegm produces mucus in the lungs. It is often accompanied by colds, fatigue, and/or postnasal drip.</div>
-                <div class="guide" id="guide-15"><h3>Guide</h3>Adult and Children older than 12 years:
-															<br>	10-15 mL (2-3 teaspoon) every 6 hours. Do not exceed 60 mL per day.
-															<br>
-															<br>	Children aged 6 to 12 years:
-															<br>	5-10 mL (1-2 teaspoon) every 6 hours. Do not exceed 30 mL per day.</div>
+                <img src="images/bactidol-hexetidine.png" alt="Medicine 11">
+                <h2 id="med-name-11">BACTIDOL</h2>
+                <div class="description" id="desc-11"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves sore throat and bacterial infections.
+													<br>	• Provides antibacterial and antifungal protection.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains hexetidine, dichlorobenzyl alcohol, amylmetacresol, or guaifenesin.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For sore throat and oral infections.
+													<br>
+													<br>	<i>J&J. (n.d.). Bactidol Product Information.</i></div>
+                <div class="guide" id="guide-11"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Gargle: 2x daily.
+													<br>	• Lozenges: 1 every 2-3 hours (max: 8/day).
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	Do not exceed the recommended dose.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Avoid eating or drinking immediately after use.</div>
             </div>
 			
-        </div>
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+			
+			
+		</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
 
     <script>
@@ -299,10 +501,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
