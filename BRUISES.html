@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -157,81 +156,155 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/iodine.jpg" alt="Medicine 2">
                 <h2 id="med-name-2">IODINE</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>Povidone-iodine is a topical antiseptic agent used for the treatment and prevention of infection in wounds. Povidone-iodine is a stable chemical complex of polyvinylpyrrolidone (povidone, PVP) and elemental iodine. It contains from 9.0% to 12.0% available iodine, calculated on a dry basis.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>Directions
-														<br>	• clean the affected area.
-														<br>	• vapply a small amount of product to the area 1 to 3 timesdaily.
-														<br>	• may be covered with a sterile bandage.
-														<br>	• if bandaged, let dry first.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/arnicare.jpg" alt="Medicine 3">
-                <h2 id="med-name-3">ARNICARE</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>Arnica is a perennial that grows to a height of 1 to 2 feet with yellow-orange flowers similar to daisies. Stems are round and hairy, ending in 1 to 3 flower stalks, with flowers 2 to 3 inches across. Leaves are bright green.</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>• Apply a thin layer of Arnicare Gel to affected area and massage gently as soon as possible after minor injury.
-														<br>	• Repeat 3 times a day or as needed.
-														<br>	• If heat or ice is applied, wait 5 minutes before applying Arnicare Gel.</div>
-            </div>
-
-            <div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images1/voltaren-b.jpg" alt="Medicine 4">
-                <h2 id="med-name-4">VOLTAREN</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>Voltaren Emulgel contains the active ingredient diclofenac, which belongs to a group of medicines called Non-steroidal anti-inflammatory drugs (NSAIDs) Voltaren Emulgel has analgesic and anti-inflammatory properties and, due to the aqueous-alcoholic base, has a soothing and cooling effect.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Voltaren Emulgel Extra Strength
-														<br>	• Apply 2 g of gel 2 times a day (morning and evening) on the affected area.
-														<br>	• The amount of gel applied (2 g for each application) should be measured using the dosing card supplied in the product carton. ...
-														<br>	• Do not use more than 4 g per day.</div>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Disinfects wounds, cuts, and bruises.
+													<br>	• Prevents bacterial infection.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains iodine, an antiseptic that kills bacteria and prevents infection.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For treating minor cuts, bruises, and skin wounds.
+													<br>
+													<br>	<i>Medline. (n.d.). Iodine Antiseptic Product Information.</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	Adults and children: Apply a small amount directly to the affected area 1-2 times daily.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use on large or deep wounds without medical advice.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Allow the solution to dry before covering with a bandage.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/betadine.jpg" alt="Medicine 5">
                 <h2 id="med-name-5">BETADINE</h2>
-                <div class="description" id="desc-5"><h3>Description</h3>Contains Povidone-Iodine that has Triple-Kill Power vs. clinically significant pathogens85. Kills 99.99% germs and stops infection. Non-sting and painless and gentle on kids. Treats wounds, cuts, burns, abrasions, scratches, bedsores, lacerations and surgical wounds.</div>
-                <div class="guide" id="guide-5"><h3>Guide</h3> Gently clean the affected area. Apply your preferred Betadine First Aid product to the affected area. The wound may be covered by a sterile bandage. If bandaged, let solution dry first.</div>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Disinfects cuts, wounds, and bruises.
+													<br>	• Prevents infection.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains povidone-iodine, an antiseptic that kills bacteria, viruses, and fungi.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For minor wounds, cuts, and bruises.
+													<br>	
+													<br>	<i>Mundipharma. (n.d.). Betadine Antiseptic Product Information.</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3> ✅ <b>Dosage:</b>
+													<br>	
+													<br>	Adults and children: Apply a small amount to the affected area 1-2 times daily.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 7 consecutive days without medical advice.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Let the solution dry before covering with a bandage.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/agua.jpg" alt="Medicine 6">
                 <h2 id="med-name-6">AGUA OXIGENADA</h2>
-                <div class="description" id="desc-6"><h3>Description</h3>Hydrogen Peroxide (agua oxigenada) has an extra oxygen atom than water, this extra oxygen atom breaks down and the molecule of water releases from this separately.</div>
-                <div class="guide" id="guide-6"><h3>Guide</h3>Follow all directions on the product package. If you have any questions, ask your doctor or pharmacist.
-														<br>
-														<br>	Do not use in the eyes or apply over large areas of skin.
-														<br>
-														<br>	If you are using this product on the skin, clean the affected area before use. Apply a small amount of product on the affected area, usually 1 to 3 times daily or as directed by your doctor. If you apply a bandage after using this product, let the area dry first.
-														<br>
-														<br>	If you are using this product as a mouth rinse, mix with an equal amount of water before using. Swish in the mouth over the affected area for at least 1 minute, then spit out. Do not swallow this product. Rinse up to 4 times daily or as directed by your dentist or doctor.
-														<br>
-														<br>	Use this product regularly in order to get the most benefit from it. To help you remember, use it at the same time(s) each day.
-														<br>	
-														<br>	Tell your doctor if your condition does not get better in 7 days or if it gets worse. If you think you may have a serious medical problem, get medical help right away.</div>
+                <div class="description" id="desc-6"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Cleans and disinfects wounds and bruises.
+													<br>	• Helps remove dead tissue.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains hydrogen peroxide, which releases oxygen to clean the wound and prevent infection.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For cleaning cuts, bruises, and minor wounds.
+													<br>	
+													<br>	<i>Agua Oxigenada. (n.d.). Hydrogen Peroxide Product Information.</i></div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	Adults and children: Apply directly to the wound 1-2 times daily.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use on deep wounds or for prolonged periods.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Rinse with sterile water after application.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/bandaid.jpg" alt="Medicine 7">
                 <h2 id="med-name-7">BAND AID</h2>
-                <div class="description" id="desc-7"><h3>Description</h3>A piece of sticking plaster of a type having a gauze pad in the center, used to cover minor wounds.</div>
-                <div class="guide" id="guide-7"><h3>Guide</h3>When applying a bandage, you should wrap it in a spiral pattern from the inside to the outside of the injured limb. You should also make sure the bandage is firm but not too tight. </div>
+                <div class="description" id="desc-7"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Covers and protects cuts, wounds, and bruises.
+													<br>	• Prevents dirt and bacteria from entering.
+													<br>	
+													<br>	🔥 <b>How It Works:</b></b>
+													<br>	
+													<br>	Contains an absorbent pad with an adhesive strip that protects the wound.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For minor cuts, scrapes, and bruises.
+													<br>	
+													<br>	<i>Johnson & Johnson. (n.d.). Band-Aid Brand Product Information.</i></div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	Adults and children: Apply to clean, dry skin and replace as needed.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not reuse the same bandage.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Change the bandage daily or when wet.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/alcohol.png" alt="Medicine 8">
                 <h2 id="med-name-8">ALCOHOL</h2>
-                <div class="description" id="desc-8"><h3>Description</h3>provides everyday, accessible disinfecting with its range of isopropyl- and ethyl-based rubbing alcohols. 99.9% effective against bacteria and viruses. Green Cross Alcohol also has moisturizing variants to prevent skin dryness.</div>
-                <div class="guide" id="guide-8"><h3>Guide</h3>In order to use the Green Cross Solution, pour the mixture on your hands directly. You can also apply it with the help of cotton balls. Then, rub liberally and lightly on the skin until the solution blends in. Do not swallow or use the Green Cross Solution near eyes.</div>
-            </div>
-			
-			<div class="grid-item" onclick="toggleDescription(this)">
-                <img src="images/bandage.jpg" alt="Medicine 9">
-                <h2 id="med-name-9">BANDAGE</h2>
-                <div class="description" id="desc-9"><h3>Description</h3>A strip of material used to bind a wound or to protect an injured part of the body.</div>
-                <div class="guide" id="guide-9"><h3>Guide</h3>When applying a bandage, you should wrap it in a spiral from the inside to the outside of the injured body part. You should also extend the bandage at least an inch past the edges of the wound.</div>
-            </div>
+                <div class="description" id="desc-8"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Disinfects wounds and reduces the risk of infection.
+													<br>	• Cleans and sanitizes skin.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains ethyl or isopropyl alcohol, which kills bacteria and germs.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For disinfecting minor cuts, wounds, and bruises.
+													<br>	
+													<br>	<i>Green Cross. (n.d.). Isopropyl Alcohol Product Information.</i></div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	Adults and children: Apply directly to the wound or on a clean cotton pad.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use on deep or open wounds.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Use sparingly to avoid skin irritation.</div>
+            </div>			
 
-        </div>
-			
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+		</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
 
     <script>
@@ -240,10 +313,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
