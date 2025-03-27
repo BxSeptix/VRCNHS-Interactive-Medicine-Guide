@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,34 +151,123 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/diatabs.jpg" alt="Medicine 1">
                 <h2 id="med-name-1">DIATABS</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>This medicine contains loperamide, an antidiarrheal agent which slows intestinal movement and reduced fluid and salt loss in the intestines, resulting in improved stool consistency.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>For Symptomatic Relief of Acute Diarrhea: Adult Dose: Take 2 capsules initially followed by 1 capsule after each loose bowel movement. Or, as directed by a doctor. Maximum dose is 16 mg (8 capsules) per day. Discontinue if there is no improvement after 2 days.</div>
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
+																<br>
+																<br>	• Treats acute diarrhea by slowing down bowel movements.
+																<br>	• Improves stool consistency by reducing fluid and salt loss in the intestines.
+																<br>
+																<br>	🔥 <b>How It Works:</b>
+																<br>	
+																<br>	Contains loperamide, an antidiarrheal agent that reduces intestinal motility, making the stool firmer.
+																<br>
+																<br>	💡 <b>Common Use:</b>
+																<br>
+																<br>	For acute diarrhea relief.
+																<br>
+																<br>	<i>United Laboratories. (n.d.). Diatabs Loperamide HCl Capsules. Retrieved from Unilab</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+																<br>	<b>Adults:</b>
+																<br>
+																<br>	Take 2 capsules initially, followed by 1 capsule after each loose bowel movement.
+																<br>
+																<br>	🚫 <b>Maximum Dose:</b> 16 mg (8 capsules) per day.
+																<br>	❗ <b>Discontinue after 2 days if no improvement occurs.</b>
+																<br>
+																<br>	✅ <b>Usage Tip:</b>
+																<br>
+																<br>	Drink plenty of fluids and electrolytes to prevent dehydration.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/imodium.jpg" alt="Medicine 2">
                 <h2 id="med-name-2">IMODIUM</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>Imodium® is a medication that treats occasional diarrhea. This medication is made out of loperamide. The solution works by slowing down your overactive bowel. This can decrease the number of bowel movements you have.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>Adults—At first, 4 milligrams (mg) (2 capsules) after the first loose bowel movement, then 2 mg (1 capsule) after each loose bowel movement after the first dose has been taken. Your doctor may adjust your dose as needed. However, dose is usually not more than 16 mg (8 capsules) per day.</div>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+																<br>
+																<br>	Treats occasional diarrhea by reducing overactive bowel movements.
+																<br>
+																<br>	🔥 <b>How It Works:</b>
+																<br>
+																<br>	Contains loperamide, which slows the intestinal process, reducing stool frequency.
+																<br>
+																<br>	💡 <b>Common Use:</b>
+																<br>
+																<br>	For diarrhea relief.
+																<br>	
+																<br>	<i>Johnson & Johnson. (n.d.). Imodium Loperamide HCl Capsules. Retrieved from Imodium PH</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+																<br>	<b>Adults:</b>
+																<br>
+																<br>	<b>• Take 4 mg (2 capsules) initially after the first loose stool.
+																<br>	• Then, 2 mg (1 capsule) after each subsequent loose stool.</b>
+																<br>
+																<br>	🚫 <b>Maximum Dose: 16 mg (8 capsules) per day.</b>
+																<br>	✅ <b>Usage Tip:</b>
+																<br>
+																<br>	Drink plenty of fluids and electrolytes to prevent dehydration.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/lomotil.jpg" alt="Medicine 3">
                 <h2 id="med-name-3">LOPERAMIDE HCL-LOMOTIL</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>Both Lomotil (diphenoxylate/atropine) and Imodium (loperamide) treat diarrhea. Lomotil is prescribed as an add-on treatment for people who still have diarrhea even though they're already taking something to treat it. Lomotil is typically used for acute diarrhea, but it may be used to treat chronic diarrhea as well.</div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>When you start using Lomotil, take two tablets four times a day. Do not take more than eight tablets (20 mg of diphenoxylate) a day. Continue this dosage until your diarrhea starts to improve (stools become firmer), which should happen within 48 hours.</div>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b>
+																<br>
+																<br>	Treats diarrhea, including chronic and acute cases.
+																<br>
+																<br>	🔥 <b>How It Works:</b>
+																<br>
+																<br>	• Combines diphenoxylate and atropine:
+																<br>	• Diphenoxylate reduces bowel movement.
+																<br>	• Atropine reduces cramping.
+																<br>
+																<br>	💡 <b>Common Use:</b>
+																<br>
+																<br>	For persistent diarrhea.
+																<br>
+																<br>	<i>Pfizer. (n.d.). Lomotil (Diphenoxylate/Atropine). Retrieved from Pfizer PH</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>✅ <b>Dosage:</b>
+																<br>	<b>Adults:</b>
+																<br>
+																<br>	<b>Take 2 tablets four times daily.</b>
+																<br>
+																<br>	🚫 <b>Maximum Dose:</b> 16 mg (8 capsules) per day.
+																<br>
+																<br>	✅ <b>Usage Tip:</b>
+																<br>
+																<br>	Avoid consuming dairy products as they can worsen diarrhea.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/loperamide.jpg" alt="Medicine 4">
                 <h2 id="med-name-4">RITEMED-LOPERAMIDE HCL</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>This medicine is used for the symptomatic relief of acute, nonspecific diarrhea, chronic diarrhea associated with inflammatory bowel disease and reduction of number and volume of discharge in patients with ileostomies and colostomies.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Adult Dose: Take 2 capsules initially followed by 1 capsule after each loose bowel movement. Or, as directed by a doctor. 
-														<br>	Maximum dose is 16 mg (8 capsules) per day. Discontinue if there is no improvement after 2 days.</div>
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b>
+																<br>
+																<br>	Relieves acute and chronic diarrhea.
+																<br>	Reduces stool volume for ileostomy and colostomy patients.
+																<br>
+																<br>	🔥 <b>How It Works:</b>
+																<br>
+																<br>	Contains loperamide, which slows down intestinal movement, reducing fluid loss.
+																<br>
+																<br>	💡 <b>Common Use:</b>
+																<br>
+																<br>	For acute and chronic diarrhea relief.
+																<br>
+																<br> 	<i>Ritemed. (n.d.). Ritemed Loperamide HCl. Retrieved from Ritemed</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>✅ <b>Dosage:</b>
+																<br>	<b>Adults:</b>
+																<br>
+																<br>	Take 2 capsules initially, followed by 1 capsule after each loose bowel movement.
+																<br>
+																<br>	🚫 <b>Maximum Dose:</b> 16 mg (8 capsules) daily.
+																<br>	❗ Discontinue after 2 days if no improvement occurs.
+																<br>
+																<br>	✅ <b>Usage Tip:</b>
+																<br>
+																<br>	Stay hydrated with oral rehydration salts (ORS) to prevent dehydration.</div>
             </div>						
 			
-        </div>
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+		</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
 
     <script>
@@ -188,10 +276,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
