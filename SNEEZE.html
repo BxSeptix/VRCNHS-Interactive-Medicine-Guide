@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Guide</title>
-    <style>
+     <style>
 
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
 			align-items: flex-start;
-            min-height: 100vh;
             position: relative;
             overflow: auto;
         }
@@ -77,7 +76,7 @@
         }
 
         .grid-item.active img {
-            transform: scale(1.2) translateY(-10px);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .grid h2 {
@@ -89,15 +88,15 @@
 
         .grid .description,
         .grid .guide {
-            font-size: 1em;
+            font-size: 0.8em;
             padding: 10px;
             color: #555;
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
         .grid-item.active .description,
         .grid-item.active .guide {
-            display: block; /* Shown when active */
+            display: block; 
         }
 
         .grid .description {
@@ -119,7 +118,7 @@
                 grid-template-columns: 1fr;
             }
         }
-		
+
 		.back-button {
             display: inline-block;
             margin: 20px auto;
@@ -131,7 +130,7 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
-
+		
         .back-button:hover {
             background-color: #004d40;
         }
@@ -152,80 +151,253 @@
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/neozep.jpg" alt="Medicine 1">
                 <h2 id="med-name-1">NEOZEP</h2>
-                <div class="description" id="desc-1"><h3>Description</h3>Phenylephrine HCl a nasal decongestant clears obstructed air passages and nasal sinuses due to congestion making breathing easier. It also reduces postnasal drip. Chlorphenamine Maleate, an anti-allergy, relieves symptoms such as runny nose, sneezing, and itchy, watery eyes.</div>
-                <div class="guide" id="guide-1"><h3>Guide</h3>Adults: Orally, 1 tablet every 6 hours, or as recommended by a doctor. Neozep Z+ Forte provides the maximum daily intake of zinc when taken at the recommended dose of 4 times a day. To avoid excessive intake, refrain from using other supplements or medicines containing zinc.</div>
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves cough, colds, and flu symptoms.
+													<br>	• Reduces nasal congestion and runny nose.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Contains phenylephrine (decongestant), paracetamol (pain reliever), and chlorphenamine (antihistamine) for multi-symptom relief.
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For cold, flu, and cough relief.
+													<br>
+													<br>	<i>Unilab. (n.d.). Neozep Forte.</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>
+													<br>	• Adults: 1 tablet every 6 hours.
+													<br>	• Children (6-12 years): ½ tablet every 6 hours.
+													<br>
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>
+													<br>	Do not exceed 4 doses in 24 hours.
+													<br>
+													<br>	✅ <b>Usage Tip:</b>
+													<br>
+													<br>	Avoid alcohol while taking this medication.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/nafarin.jpg" alt="Medicine 2">
                 <h2 id="med-name-2">NAFARIN-A</h2>
-                <div class="description" id="desc-2"><h3>Description</h3>Nafarin®-A
-														<br>	This medicine is used for the relief of clogged nose, runny nose, postnasal drip, itchy and watery eyes, sneezing, headache, body aches, and fever associated with the common cold, allergic rhinitis, sinusitis, flu, and other minor respiratory tract infections.</div>
-                <div class="guide" id="guide-2"><h3>Guide</h3>Adults and Children 12 years and older: Orally, 1 tablet every 6 hours, or, as recommended by a doctor.
-														<br>
-														<br>	For more information on safety, precaution and other information about this product, please see the Patient Information Leaflet.</div>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>
+													<br>	• Relieves nasal congestion and allergy symptoms.
+													<br>	• Reduces runny nose, sneezing, and itchy eyes.
+													<br>
+													<br>	🔥 <b>How It Works:</b>
+													<br>
+													<br>	Combines phenylpropanolamine (decongestant) and chlorphenamine maleate (antihistamine).
+													<br>
+													<br>	💡 <b>Common Use:</b>
+													<br>
+													<br>	For allergic rhinitis and common cold symptoms.
+													<br>
+													<br>	<i>Unilab. (n.d.). Nafarin-A.</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults: 1 tablet every 4-6 hours.
+													<br>	• Children (6-12 years): ½ tablet every 6 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed 4 doses in 24 hours.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Take with food to prevent stomach upset.</div>
 			</div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/disudrin.jpg" alt="Medicine 3">
                 <h2 id="med-name-3">DISUDRIN</h2>
-                <div class="description" id="desc-3"><h3>Description</h3>Disudrin® is the number 1 and most prescribed cold medicine for children that provides relief from clogged nose, runny nose, itchy watery eyes and sneezing due to common colds. </div>
-                <div class="guide" id="guide-3"><h3>Guide</h3>1 to 3 months	0.25 mL	(Oral Drops) every 6 hours
-														<br>	4 to 6 months	0.5 mL (Oral Drops) every 6 hours
-														<br>	7 to 12 months	0.75 mL	(Oral Drops) every 6 hours
-														<br>	1 to 2 years	2.5 mL (1/2 teaspoonful) (Syrup) every 6 hours
-														<br>	2 to 6 years	5 mL (2 teaspoonful) (1 teaspoonful) (Syrup) every 6 hours
-														<br>	12 years and older	10 mL (syrup) every 6 hours
-														<br>
-														<br>	Or, as recommended by a doctor	Or, as recommended by a doctor</div>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves nasal congestion due to colds or allergies.
+													<br>	• Reduces runny nose and sneezing.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains phenylpropanolamine (decongestant) and chlorphenamine maleate (antihistamine).
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For colds, flu, and allergic rhinitis.
+													<br>	
+													<br>	<i>Unilab. (n.d.). Disudrin Syrup.</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Children (2-6 years): 2.5 mL syrup every 6 hours.
+													<br>	• Children (7-12 years): 5 mL syrup every 6 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed 4 doses in 24 hours.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Use the provided measuring device for accuracy.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/lopared.jpg" alt="Medicine 4">
                 <h2 id="med-name-4">LOPARED</h2>
-                <div class="description" id="desc-4"><h3>Description</h3>This medicine is used for the relief of clogged nose, sneezing, runny, itchy nose, and itchy, watery eyes associated with allergic rhinitis.</div>
-                <div class="guide" id="guide-4"><h3>Guide</h3>Children 2 years and older:
-														<br>
-														<br>	Body weight 30 kg or less	-	2.5 mL (1/2 teaspoonful)
-														<br>	Body weight more than 30 kg		-	5 mL (1 teaspoonful)</div>
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Treats acute and chronic diarrhea.
+													<br>	• Reduces stool frequency.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains loperamide hydrochloride, which slows down gut movement.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For diarrhea relief.
+													<br>	
+													<br>	<i>Unilab. (n.d.). Lopared Product Information.</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults: 2 mg after the first loose stool, then 1 mg after each subsequent stool.
+													<br>	• Maximum: 8 mg in 24 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 2 days without medical supervision.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Stay hydrated while taking the medication.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images1/sinutab.jpg" alt="Medicine 5">
                 <h2 id="med-name-5">SINUTAB</h2>
-                <div class="description" id="desc-5"><h3>Description</h3>For Maximum Relief from Head Cold: With Triple Power Formula: stops runny nose (sipon), clears nasal congestion (baradong ilong), and provides up to 6 hour pain relief.</div>
-                <div class="guide" id="guide-5"><h3>Guide</h3>How much and how often should you use this Medicine?
-														<br>	
-														<br>	Adults and children 12 years and over: Take 1-2 tablets every 4 as necessary. Do not exceed 8 tablets within a 24-hour period.</div>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves nasal congestion and sinus pressure.
+													<br>	• Reduces headache and fever.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains pseudoephedrine (decongestant) and paracetamol (pain reliever).
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For sinusitis, colds, and flu symptoms.
+													<br>	
+													<br>	<i>Johnson & Johnson. (n.d.). Sinutab Product Information.</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults: 1 tablet every 4-6 hours.
+													<br>	• Maximum: 4 tablets in 24 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not use for more than 7 days without a doctor’s advice.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Take with a full glass of water.</div>
 			</div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/allerta.jpg" alt="Medicine 6">
                 <h2 id="med-name-6">ALLERTA</h2>
-                <div class="description" id="desc-6"><h3>Description</h3>Allerta gives less drowsy, fast relief from allergies.
-														<br>
-														<br>	It contains Loratadine, an anti-allergy ingredient. Loratadine blocks the substance that causes allergic symptoms (histamine). Loratadine is less likely to make you drowsy or dizzy than the older class of anti-allergy medicines.</div>
-                <div class="guide" id="guide-6"><h3>Guide</h3>This medicine should be taken orally (by mouth) once a day. (See table.) Missed Dose: Take the missed dose as soon as the patient remembers then the subsequent dose as recommended (i.e., after 24 hours).</div>
+                <div class="description" id="desc-6"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves allergy symptoms.
+													<br>	• Reduces sneezing, runny nose, and itchy eyes.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains loratadine, a non-drowsy antihistamine.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For allergic rhinitis and skin allergies.
+													<br>	
+													<br>	<i>Unilab. (n.d.). Allerta Product Information.</i></div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults: 1 tablet (10 mg) once daily.
+													<br>	• Children (2-12 years): 5 mg once daily.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed the recommended dose.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Take with or without food.</div>
             </div>
 			
 			<div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/claritin.jpg" alt="Medicine 7">
                 <h2 id="med-name-7">CLARITIN</h2>
-                <div class="description" id="desc-7"><h3>Description</h3>Claritin® provides relief of symptoms that over 200 different allergens can trigger. It offers non-drowsy relief of symptoms caused by allergens like those from pollen, mold, dust, and pets. Claritin® is an antihistamine, so it hinders the cascade triggered by allergens.</div>
-                <div class="guide" id="guide-7"><h3>Guide</h3>Adults and children 6 years and over	1 tablet daily; not more than 1 tablet in 24 hours
-														<br>	Children under 6 years of age	-	Ask a doctor
-														<br>	Consumers with liver or kidney disease	-	Ask a doctor</div>
+                <div class="description" id="desc-7"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves allergy symptoms.
+													<br>	• Reduces sneezing, runny nose, and itchy eyes.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains loratadine, a non-drowsy antihistamine.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For allergic rhinitis and chronic urticaria.
+													<br>	
+													<br>	<i>Bayer. (n.d.). Claritin Product Information.</i></div>
+                <div class="guide" id="guide-7"><h3>Guide</h3>✅ <b>Dosage:</b>
+
+													<br>	• Adults and children (6+ years): 1 tablet (10 mg) once daily.
+													<br>	• Children (2-5 years): 5 mL syrup once daily.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed the recommended dose.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	Take with water, with or without food.</div>
             </div>
 
             <div class="grid-item" onclick="toggleDescription(this)">
                 <img src="images/benadryl.jpg" alt="Medicine 8">
-                <h2 id="med-name-8">BENADRYl</h2>
-                <div class="description" id="desc-8"><h3>Description</h3>Benadryl® One offers fast, no-drowse, 24-hour allergy relief for adults and children 6 yrs and above. This product is available in 10mg Tablets.</div>
-                <div class="guide" id="guide-8"><h3>Guide</h3>The recommended adult Benadryl dosage for allergies is 1 to 2 tablets or capsules by mouth every 4 to 6 hours as needed. You shouldn't take more than 6 doses (300 mg) in a 24-hour period. OTC Benadryl is only labeled for the relief of mild allergy symptoms.</div>
+                <h2 id="med-name-8">BENADRYL</h2>
+                <div class="description" id="desc-8"><h3>Description</h3>💊 <b>Purpose:</b>
+													<br>	
+													<br>	• Relieves allergy symptoms and colds.
+													<br>	• Reduces sneezing, runny nose, and itchy throat.
+													<br>	
+													<br>	🔥 <b>How It Works:</b>
+													<br>	
+													<br>	Contains diphenhydramine, a first-generation antihistamine.
+													<br>	
+													<br>	💡 <b>Common Use:</b>
+													<br>	
+													<br>	For colds, hay fever, and allergies.
+													<br>	
+													<br>	<i>Johnson & Johnson. (n.d.). Benadryl Product Information.</i></div>
+                <div class="guide" id="guide-8"><h3>Guide</h3>✅ <b>Dosage:</b>
+													<br>	
+													<br>	• Adults: 25-50 mg every 4-6 hours.
+													<br>	• Children (6-12 years): 12.5-25 mg every 4-6 hours.
+													<br>	
+													<br>	🚫 <b>Usage Limit:</b>
+													<br>	
+													<br>	Do not exceed 6 doses in 24 hours.
+													<br>	
+													<br>	✅ <b>Usage Tip:</b>
+													<br>	
+													<br>	May cause drowsiness; avoid driving or operating machinery.</div>
             </div>						          
 			
-        </div>
-		<a href="SECTION AREA.html" class="back-button">Go Back</a>
+			</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
     </div>
 
     <script>
@@ -234,10 +406,7 @@
             item.classList.toggle('active');
         }
 		
-		document.querySelector('.feedback-button').addEventListener('click', function(event) {
-			event.preventDefault();
-			alert('Thank you for your feedback!');
-		});
+		
     </script>
 </body>
 </html>
