@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Guide</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+			align-items: flex-start;
+            position: relative;
+            overflow: auto;
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .floating-icon1 { top: 10%; left: 5%; width: 90px; }
+        .floating-icon2 { top: 40%; right: 10%; width: 80px; }
+        .floating-icon3 { bottom: 15%; left: 10%; width: 100px; }
+        .floating-icon4 { bottom: 10%; right: 20%; width: 80px; }
+
+        .floating-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 0.2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 90%;
+			margin: 40px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2369a8;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .grid-item.active img {
+            transform: scale(1.1) translateY(-10px);
+        }
+
+        .grid h2 {
+            font-size: 1.5em;
+            color: #004d40;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .grid .description,
+        .grid .guide {
+            font-size: 0.7em;
+            padding: 10px;
+            color: #555;
+            display: none; 
+        }
+
+        .grid-item.active .description,
+        .grid-item.active .guide {
+            display: block; 
+        }
+
+        .grid .description {
+            background: #e0f7fa;
+        }
+
+        .grid .guide {
+            background: #f9fbe7;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+		.back-button {
+            display: inline-block;
+            margin: 20px auto;
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+		
+        .back-button:hover {
+            background-color: #004d40;
+        }
+		
+    </style>
+</head>
+<body>
+
+    <img src="images1/stethoscope_11706618.gif" alt="Floating Icon 1" class="floating-icon floating-icon1">
+    <img src="images1/vaccine_11706620.gif" alt="Floating Icon 2" class="floating-icon floating-icon2">
+    <img src="images1/red-hospital-clinic-building-10737.png" alt="Floating Icon 3" class="floating-icon floating-icon3">
+    <img src="images/heartbeat_13099799.gif" alt="Floating Icon 4" class="floating-icon floating-icon4">
+
+    <div class="container">
+        <h1 id="page-title">Medicine Guide For Body Pain</h1>
+        <div class="grid">
+
+            <div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/medicol.jpg" alt="Medicine 1">
+                <h2 id="med-name-1">MEDICOL</h2>
+                <div class="description" id="desc-1"><h3>Description</h3>💊 <b>Purpose:</b>
+												<br>
+												<br>	• Relieves body pain and reduces fever.
+												<br>	• Alleviates fatigue caused by headaches and muscle pain.
+												<br>	
+												<br>	🔥 <b>How It Works:</b>
+												<br>	
+												<br>	Contains ibuprofen, a non-steroidal anti-inflammatory drug (NSAID) that reduces inflammation and pain.
+												<br>	
+												<br>	💡 <b>Common Use:</b>
+												<br>	
+												<br>	For mild to moderate body pain and fever.
+												<br>	
+												<br>	<i>Unilab. (n.d.). Medicol Advance Product Information.</i></div>
+                <div class="guide" id="guide-1"><h3>Guide</h3>✅ <b>Dosage:</b>
+												<br>	
+												<br>	• Adults: 1-2 capsules every 4-6 hours as needed.
+												<br>	• Maximum: 6 capsules in 24 hours.
+												<br>	
+												<br>	🚫 <b>Usage Limit:</b>
+												<br>	
+												<br>	Do not use for more than 10 consecutive days without consulting a doctor.
+												<br>	
+												<br>	✅ <b>Usage Tip:</b>
+												<br>	
+												<br>	Take with food or milk to prevent stomach irritation.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/rexidol.jpg" alt="Medicine 2">
+                <h2 id="med-name-2">REXIDOL</h2>
+                <div class="description" id="desc-2"><h3>Description</h3>💊 <b>Purpose:</b> Relieves fever, body pain, and flu symptoms.
+														<br>
+														<br>	🔥 <b>How it works:</b>
+														<br>
+														<br>	Paracetamol: Reduces fever and pain.
+														<br>	Caffeine: Enhances pain relief effectiveness.
+														<br>
+														<br>	💡 <b>Common use:</b> For fever, body pain, and muscle aches.
+														<br>
+														<br>	<i>Rexidol. (n.d.). Paracetamol + Caffeine for fever and pain relief. Unilab. Retrieved from https://www.unilab.com.ph</i></div>
+                <div class="guide" id="guide-2"><h3>Guide</h3>✅ <b>Dosage:</b>
+														<br>	<b>Adults and children</b> (≥12 years): 1–2 tablets every 6 hours.
+														<br>
+														<br>	🚫 <b>Maximum dose:</b> 8 tablets per day.
+														<br>
+														<br>	✅ <b>Usage Tip:</b> Do not double the dose if a dose is missed.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/katinko.jpg" alt="Medicine 3">
+                <h2 id="med-name-3">KATINKO</h2>
+                <div class="description" id="desc-3"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, headaches, and muscle pain.
+													<br>
+													<br>	🔥 <b>How it works:</b> Provides a cooling sensation that reduces discomfort and stimulates circulation.
+													<br>	
+													<br>	💡 <b>Common use:</b> For dizziness caused by muscle tension or fatigue.
+													<br>
+													<br>	<i>Katinko. (n.d.). Katinko: Ointment for pain relief. Greenstone Pharmaceutical. Retrieved from https://katinko.com.ph</i></div>
+                <div class="guide" id="guide-3"><h3>Guide</h3><b>Apply generously to the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Avoid applying on broken skin.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/efficascent.png" alt="Medicine 4">
+                <h2 id="med-name-4">EFFICASCENT OIL</h2>
+                <div class="description" id="desc-4"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, muscle pain, and tension headaches.
+													<br>
+													<br>	🔥 <b>How it works:</b> The cooling effect promotes circulation, which reduces dizziness caused by muscle tension.
+													<br>
+													<br>	💡 <b>Common use:</b> For dizziness due to fatigue or muscle stiffness.
+													<br>
+													<br>	<i>Efficascent Oil. (n.d.). Efficascent Oil: Liniment for pain relief. International Pharmaceuticals, Inc. Retrieved from https://www.efficascentoil.com.ph</i></div>
+                <div class="guide" id="guide-4"><h3>Guide</h3><b>Apply to the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Inhale vapors for nasal decongestion if dizziness is linked to sinus issues.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images1/omega.jpg" alt="Medicine 5">
+                <h2 id="med-name-5">OMEGA PAIN KILLER</h2>
+                <div class="description" id="desc-5"><h3>Description</h3>💊 <b>Purpose:</b> Relieves dizziness, muscle pain, and tension.
+													<br>
+													<br>	🔥 <b>How it works:</b> Provides a warming sensation that relaxes muscles and reduces dizziness caused by tension.
+													<br>
+													<br>	💡 <b>Common use:</b> For dizziness from fatigue or tension.
+													<br>
+													<br>	<i>Omega Pain Killer. (n.d.). Omega Pain Killer: Relief for muscle pain and dizziness. ASC Ref #: I0181P121822O. Retrieved from https://asc.com.ph</i></div>
+                <div class="guide" id="guide-5"><h3>Guide</h3><b>Apply a small amount on the affected area 3–4 times daily.</b>
+													<br>
+													<br>	✅ <b>Usage Tip:</b> Avoid applying on open wounds.</div>
+            </div>
+			
+			<div class="grid-item" onclick="toggleDescription(this)">
+                <img src="images/biogesic.jpg" alt="Medicine 6">
+                <h2 id="med-name-6">BIOGESIC</h2>
+                <div class="description" id="desc-6"><h3>Description</h3>💊 <b>Purpose:</b> Relieves mild to moderate headaches, fever, and body pain.
+															<br>
+															<br>	🔥 <b>How it works:</b> Reduces the production of prostaglandins (which cause pain and inflammation), providing quick headache relief.
+															<br>
+															<br>	💡 <b>Common use:</b> Over-the-counter (OTC) pain reliever for general headaches and fever.
+															<br>
+															<br>	<i>Top.org.ph. (n.d.). Biogesic: Paracetamol-based analgesic and antipyretic. Retrieved from https://top.org.ph/medicine-brands-philippines</i></div>
+                <div class="guide" id="guide-6"><h3>Guide</h3>💊 <b>Dosage for Adults:</b> 500 mg – 1000 mg every 4-6 hours as needed.
+															<br>
+															<br>	🚫 <b>Maximum daily dose:</b> 4000 mg (8 tablets of 500 mg).
+															<br>
+															<br>	🧒 <b>Dosage for Children</b> (6-12 years): 250 mg – 500 mg every 4-6 hours.
+															<br>
+															<br>	✅ <b>Usage Tip:</b> Take with or after food to avoid stomach irritation.</div>
+            </div>
+			
+		</div>
+		<a href="SECTION AREA.html" class="back-button">Go Back</a>	
+    </div>
+
+    <script>
+
+        function toggleDescription(item) {
+            item.classList.toggle('active');
+        }
+		
+		
+    </script>
+</body>
+</html>
