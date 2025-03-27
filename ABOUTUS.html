@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <style>
-
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
@@ -65,16 +64,9 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        h2, h3 {
             color: #00796b;
-            margin-bottom: 20px;
-            font-size: 1.8em;
             text-align: center;
-        }
-
-        h3 {
-            color: #004d40;
-            margin-bottom: 10px;
         }
 
         p, ul {
@@ -111,7 +103,6 @@
             margin-right: 10px;
             color: #00796b;
         }
-		
     </style>
 </head>
 <body>
@@ -122,7 +113,7 @@
 			
 			<select id="languageSelector" style="padding: 5px; border-radius: 5px; font-size: 1em; cursor: pointer; border: none; background-color: #004d40; color: #fff;">
 				<option value="en">English</option>
-				<option value="tl">Tagalog</option>
+				<option value="tl">Filipino</option>
 			</select>
         </div>
     </header>
@@ -130,6 +121,12 @@
     <div class="container">
         <h2 id="welcome">Welcome to the VRCNHS Interactive Medicine Guide</h2>
      
+		<div class="card">
+			<h3 id="MissionVission">Mission and Vision</h3>
+			<p id="Mission"><strong>Mission:</strong> To promote health literacy by providing accessible, accurate, and multilingual information about medications, empowering users to make informed health decisions.</p>
+			<p id="Vision"><strong>Vision:</strong> To become the leading digital resource for medication information in the region, ensuring safe and informed healthcare practices for all users.</p>
+		</div>
+	 
         <div class="card">
             <h3 id="featuresTitle">Website Features</h3>
             <ul>
@@ -142,22 +139,27 @@
         </div>
 
         <div class="card">
-            <h3 id="Sixth">About the Program</h3>
-            <p id="Seventh">
-                The Interactive Medicine Guide is part of an initiative by VRCNHS to promote health literacy among 
-                students, staff, and the community. This program bridges the gap between complex medical information 
-                and everyday understanding, making health care knowledge more accessible.
-            </p>
-        </div>
+			<h3 id="Sixth">About the Program</h3>
+			<p id="Seventh">
+				The Interactive Medicine Guide is part of an initiative by VRCNHS to promote health literacy among 
+				students, staff, and the community. This program bridges the gap between complex medical information 
+				and everyday understanding, making healthcare knowledge more accessible.
+			</p>
+			<p id="Future">
+				Future plans include integrating real-time medical updates, collaborating with healthcare professionals, 
+				and expanding the database to include more medications and potential drug interactions.
+			</p>
+		</div>
+
 
         <div class="card">
             <h3 id="Eighth">School Information</h3>
             <p>
-                <strong>School Name:</strong> VIRGINIA RAMIREZ-CRUZ HIGHSCHOOL (VRCNHS)<br>
-                <strong>Principal:</strong> Dr. Maria Santos<br>
+                <strong>School Name:</strong> VIRGINIA RAMIREZ-CRUZ NATIONAL HIGHSCHOOL (VRCNHS)<br>
+                <strong>Principal:</strong> Ma. Lourdes C. Valondo<br>
                 <strong>Address:</strong> 3014 Siling Bata, Pandi, Bulacan, Philippines<br>
-                <strong>Contact:</strong> (044) 661 0230<br>
-                <strong>Email:</strong> vrcnhs.ssg@gmail.com
+                <strong>Contact:</strong> (044) 697 0809<br>
+                <strong>Email:</strong> virginiaramirez_cruz@yahoo.com
             </p>
         </div>
 
@@ -167,140 +169,23 @@
                 Our team comprises passionate faculty and students from VRCNHS. Each member has contributed to making this 
                 project a success, from designing the interface to curating content. This is a product of collaboration and dedication.
             </p>
-			
-			<div style="display: flex; align-items: center; margin-bottom: 20px;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images/andrew.jpg" alt="Developer 1 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Cruz, Jhon Andrew</p>
-					<p><b>Position:</b> Main Developer</p>
-					<p><b>Contribution:</b> Structure of whole website/project (HTML)</p>
-					<p><b>Email:</b> jhonandrew09292578775@gmail.com</p>
-					<p><b>Birthday:</b> September 12, 2006</p>
-					<p><b>Address:</b> Siling Bata, Pandi, Bulacan</p>
-				</div>
-			</div>
-
-			<div style="display: flex; align-items: center; margin-bottom: 20px;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images/erica.jpg" alt="Developer 2 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Ibasco, Erica Kaye</p>
-					<p><b>Position:</b> Support Developer</p>
-					<p><b>Contribution:</b> Backend development</p>
-					<p><b>Email:</b> ericakayeibasco6@gmail.com</p>
-					<p><b>Birthday:</b> March 08, 2007</p>
-					<p><b>Address:</b> Padre Pio Cacarong Bata, Pandi, Bulcan</p>
-				</div>
-			</div>
-
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images/cyron.jpg" alt="Developer 3 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Calumpiano, Cyron</p>
-					<p><b>Position:</b> Support Developer</p>
-					<p><b>Contribution:</b> Design and UI/UX</p>
-					<p><b>Email:</b> Cyroncalumpiano33@gmail.com</p>
-					<p><b>Birthday:</b> February 5, 2007</p>
-					<p><b>Address:</b> Bagong Barrio, Pandi, Bulacan</p>
-				</div>
-			</div>
-			
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images1/tristan.jpg" alt="Developer 4 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Magtalas, Tristan</p>
-					<p><b>Position:</b> Support Developer</p>
-					<p><b>Contribution:</b> Content Researcher</p>
-					<p><b>Email:</b> tristanmagtalas01@gmail.com</p>
-					<p><b>Birthday:</b> November 12, 2005</p>
-					<p><b>Address:</b> Bagong Barrio, Pandi, Bulacan</p>
-				</div>
-			</div>
-			
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images/apple.jpg" alt="Developer 5 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Cinilong, Apple</p>
-					<p><b>Position:</b> Trouble Shoot Team</p>
-					<p><b>Contribution:</b> Design Specialist</p>
-					<p><b>Email:</b> applecinilong@gmail.com</p>
-					<p><b>Birthday:</b> February 12 2006</p>
-					<p><b>Address:</b> Mapulang Lupa, Pandi, Bulacan</p>
-				</div>
-			</div>
-			
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images/aeron.jpg" alt="Developer 6 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Solon, Aeron</p>
-					<p><b>Position:</b> Trouble Shoot Team</p>
-					<p><b>Contribution:</b> Translation Coordinator</p>
-					<p><b>Email:</b> aeronsolon.0807@gmail.com </p>
-					<p><b>Birthday:</b> August 24,2007</p>
-					<p><b>Address:</b> Padre Pio Cacarong Bata, Pandi, Bulcan</p>
-				</div>
-			</div>
-			
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images/darwin.jpg" alt="Developer 7 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Eelesterio, Darwin</p>
-					<p><b>Position:</b> Trouble Shoot Team</p>
-					<p><b>Contribution:</b> Quality Assurance Tester</p>
-					<p><b>Email:</b> darwinelesterio177@gmail.com</p>
-					<p><b>Birthday:</b> August 10, 2005</p>
-					<p><b>Address:</b> Bagong Barrio, Pandi, Bulacan</p>
-				</div>
-			</div>
-			
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images1/rickwarren.jpg" alt="Developer 8 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Esteban, Rickwarren</p>
-					<p><b>Position:</b> Trouble Shoot Team</p>
-					<p><b>Contribution:</b> Documentation Writer</p>
-					<p><b>Email:</b> Rickwarrenalexesteban@gmail.com</p>
-					<p><b>Birthday:</b> December 10 2006</p>
-					<p><b>Address:</b> Mapulang Lupa, Pandi, Bulacan</p>
-				</div>
-			</div>
-			
-			<div style="display: flex; align-items: center;">
-				<div style="flex: 0 0 150px; margin-right: 20px;">
-					<img src="images1/wilson.jpg" alt="Developer 9 Picture" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-				</div>
-				<div style="flex: 1;">
-					<p><b>Name:</b> Seguira, Wilson</p>
-					<p><b>Position:</b> Trouble Shoot Team</p>
-					<p><b>Contribution:</b> Accessibility Advocate</p>
-					<p><b>Email:</b> wilsonphilipseguira0@gmail.com </p>
-					<p><b>Birthday:</b> October 03, 2007</p>
-					<p><b>Address:</b> Mapulang Lupa, Pandi, Bulacan</p>
-				</div>
-			</div>
-        </div>
+		</div>
+		
+		<div class="card">
+			<h3 id="Acknowledgments">Acknowledgments</h3>
+			<p id="knowledge">
+				We would like to express our heartfelt gratitude to the faculty members, IT mentors, and school administrators 
+				for their unwavering support and guidance throughout this project. Their expertise and dedication were instrumental 
+				in bringing this website to life.
+			</p>
+		</div>
 		
 		<div class="card">
             <h3 id="Eleventh">Contact Information</h3>
             <ul>
                 <li>Email: jhonandrew09292578775@gmail.com</li>
                 <li>Phone: (+63) 970-6914-856 </li>
-                <li>Address: Pandi, Bulacan</li>
+                <li>Address: 3014 Siling Bata, Pandi, Bulacan, Philippines</li>
             </ul>
         </div>
 
@@ -327,6 +212,12 @@
 					Tenth: "Our team comprises passionate faculty and students from VRCNHS. Each member has contributed to making this project a success, from designing the interface to curating content. This is a product of collaboration and dedication.",
 					Eleventh: "Contact Information",
 					goBack: "Go Back",
+					MissionVission: "Mission and Vision",
+					Mission: "To promote health literacy by providing accessible, accurate, and multilingual information about medications, empowering users to make informed health decisions.",
+					Vision: "To become the leading digital resource for medication information in the region, ensuring safe and informed healthcare practices for all users.",
+					Acknowledgments: "Acknowledgments",
+					knowledge: "We would like to express our heartfelt gratitude to the faculty members, IT mentors, and school administrators for their unwavering support and guidance throughout this project. Their expertise and dedication were instrumental in bringing this website to life.",
+					Future: "Future plans include integrating real-time medical updates, collaborating with healthcare professionals, and expanding the database to include more medications and potential drug interactions.",
 				},
 				tl: {
 					title: "Tungkol sa Amin",
@@ -344,6 +235,12 @@
 					Tenth: "Binubuo ang aming koponan ng masugid na guro at mga mag-aaral mula sa VRCNHS. Nag-ambag ang bawat miyembro upang maging matagumpay ang proyektong ito, mula sa pagdidisenyo ng interface hanggang sa pag-curate ng nilalaman. Ito ay produkto ng pagtutulungan at dedikasyon.",
 					Eleventh: "Impormasyon sa Pakikipag-ugnayan",
 					goBack: "Bumalik",
+					MissionVission: "Misyon at Visyon",
+					Mission: "Upang i-promote ang health literacy sa pamamagitan ng pagbibigay ng naa-access, tumpak, at multilinggwal na impormasyon tungkol sa mga gamot, na nagbibigay-kapangyarihan sa mga user na gumawa ng matalinong mga desisyon sa kalusugan.",
+					Vision: "Upang maging nangungunang digital na mapagkukunan para sa impormasyon ng gamot sa rehiyon, tinitiyak ang ligtas at matalinong mga kasanayan sa pangangalagang pangkalusugan para sa lahat ng mga gumagamit.",
+					Acknowledgments: "Mga Pasasalamat",
+					knowledge: "Nais naming ipahayag ang aming taos-pusong pasasalamat sa mga miyembro ng faculty, IT mentor, at mga administrador ng paaralan para sa kanilang walang patid na suporta at paggabay sa buong proyektong ito. Ang kanilang kadalubhasaan at dedikasyon ay naging instrumento sa pagbibigay buhay sa website na ito.",
+					Future: "Kabilang sa mga plano sa hinaharap ang pagsasama ng mga real-time na medikal na update, pakikipagtulungan sa mga propesyonal sa pangangalagang pangkalusugan, at pagpapalawak ng database upang magsama ng higit pang mga gamot at potensyal na pakikipag-ugnayan sa droga.",
 				},
 			};
 
